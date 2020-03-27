@@ -11,10 +11,12 @@
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-remove": "^0.1.0",
-    "grunt-sass": "^1.2.1",
+    "grunt-sass": "^3.1.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-w3c-html-validation": "^0.1.8"
   },
-  "dependencies": {
-  }
+  "scripts": {
+    "grunt": "grunt"
+  },
+  "dependencies": {}
 }

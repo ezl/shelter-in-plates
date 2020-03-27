@@ -1,3 +1,5 @@
+const sass = require('node-sass');
+
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -43,6 +45,8 @@ module.exports = function (grunt) {
                 tasks: ['sass:dev'],
                 options: {
                     spawn: false,
+                    implementation: 'sass',
+                    sourceMap: true
                 },
             },
         },

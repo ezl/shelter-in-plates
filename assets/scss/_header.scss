@@ -21,6 +21,9 @@
 	&.transparent { background-color: transparent; color: #fff; }
 
 	.module {
+    a {
+      text-decoration: none;
+    }
 		line-height: $header-height-inner;
 		display: inline-block;
 		

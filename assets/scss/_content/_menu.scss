@@ -74,6 +74,14 @@
 .menu-category {
     margin-bottom: 2rem;
 
+    .restaurant-page-message {
+        position: relative;
+        min-height: 160px;
+        padding: 2rem 3rem 1rem;
+        background-color: $color-light;
+        color: $color-global;
+    }
+
     .menu-category-title {
         position: relative;
         height: 35vh;

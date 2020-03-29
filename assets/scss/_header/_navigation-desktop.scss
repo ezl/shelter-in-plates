@@ -16,6 +16,10 @@
             margin-right: 1.5rem;
         }
 
+        &.selected {
+          border-bottom: 2px solid $color-global;
+        }
+
         &.has-dropdown {
             > a {
                 &:after {

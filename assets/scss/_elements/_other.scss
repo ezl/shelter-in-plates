@@ -97,6 +97,10 @@ hr {
     @include border-radius(0.75rem);
 }
 
+.img-thumbnail {
+    margin: 0.25rem;
+}
+
 /* Actions link */
 
 .action-icon {

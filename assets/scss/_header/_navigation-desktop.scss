@@ -4,6 +4,10 @@
 .nav-main {
     font-family: $font-secondary;
     text-transform: uppercase;
+    a {
+      color: $color-global;
+      text-decoration: none;
+    }
 
     > li {
         position: relative;

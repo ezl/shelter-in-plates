@@ -35,11 +35,12 @@ button, input {
 }
 
 a {
-	color: inherit;
+	color: $color-primary;
+	text-decoration: underline;
 	@include transition(all 0.2s ease-in-out);
 }
 
-a:hover, a:focus { text-decoration: none; color: $color-primary; }
+a:hover, a:focus { color: blue; }
 
 textarea:focus, input:focus, a:focus, a:visited, *:focus { outline: none; }
 

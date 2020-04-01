@@ -253,14 +253,14 @@ When making your purchase, please include a message for the hospital staff, your
                         <div class="panel-details-content">
                             <div class="form-group">
                                 <label class="custom-control custom-radio">
-                                    <input name="radio_size" type="radio" class="custom-control-input" checked>
+                                    <input name="radio_size" type="radio" id="sku_H0zUx38rUp8z3f" class="custom-control-input" checked>
                                     <span class="custom-control-indicator"></span>
                                     <span class="custom-control-description">1 Meal ($11.00)</span>
                                 </label>
                             </div>
                             <div class="form-group">
                                 <label class="custom-control custom-radio">
-                                    <input name="radio_size" type="radio" class="custom-control-input">
+                                    <input name="radio_size" type="radio" id="plan_H0zUtlrL5334RL" class="custom-control-input" >
                                     <span class="custom-control-indicator"></span>
                                     <span class="custom-control-description">Weekly Meal Subscription ($10.00/week)</span>
                                 </label>
@@ -282,7 +282,7 @@ When making your purchase, please include a message for the hospital staff, your
                     </div>
                 </div>
             </div>
-            <button type="button" class="modal-btn btn btn-secondary btn-block btn-lg" data-dismiss="modal"><span>Check Out</span></button>
+            <button id="checkout-button-sku_H0zUx38rUp8z3f" type="button" class="modal-btn btn btn-secondary btn-block btn-lg" data-dismiss="modal"><span>Check Out</span></button>
         </div>
     </div>
 </div>
@@ -304,6 +304,50 @@ When making your purchase, please include a message for the hospital staff, your
 <!-- JS Core -->
 <script src="assets/js/core.js"></script>
 
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+<script>
+    (function() {
+      var stripe = Stripe('pk_test_1Y5uKjzsmVDJgLrVfab9EqMZ003Obla4ca');
+      
+      var checkoutButton = document.getElementById('checkout-button-sku_H0zUx38rUp8z3f');
+
+      checkoutButton.addEventListener('click', function () {
+        var checkedItem = $('input[name="radio_size"]:checked');
+        var checkedItemId = checkedItem.attr('id')
+
+        var data = {
+          // Do not rely on the redirect to the successUrl for fulfilling
+          // purchases, customers may not always reach the success_url after
+          // a successful payment.
+          // Instead use one of the strategies described in
+          // https://stripe.com/docs/payments/checkout/fulfillment
+          //successUrl: 'http://www.shelter-in-plates.com/sample-page.html',
+          //cancelUrl: 'https://www.shelter-in-plates.com/sample-page.html',
+          successUrl: 'http://localhost:8082/sample-page.html',
+          cancelUrl: 'http://localhost:8082/sample-page.html',
+        }
+
+        if (checkedItemId.indexOf('sku') >= 0) {
+            data.items = [{sku: checkedItemId, quantity: 1}]
+        } else {
+            data.items = [{plan: checkedItemId, quantity: 1}]
+        }
+
+        // When the customer clicks on the button, redirect
+        // them to Checkout.
+        stripe.redirectToCheckout(data)
+        .then(function (result) {
+          if (result.error) {
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer.
+            var displayError = document.getElementById('error-message');
+            displayError.textContent = result.error.message;
+          }
+        });
+      });
+    })();
+    </script>
 </body>
 
 </html>

@@ -233,7 +233,7 @@ When making your purchase, please include a message for the hospital staff, your
             <div class="modal-product-details">
                 <div class="row align-items-center">
                     <div class="col-md-12">
-                        <h6 class="mb-1">One Time</h6>
+                        <h6 class="mb-1" id="mealFrequency">One Time</h6>
                         <span class="text-muted">We'll deliver a healthy, nourishing meal on your behalf.</span>
                     </div>
                 </div>
@@ -317,10 +317,14 @@ When making your purchase, please include a message for the hospital staff, your
 
       buySingleMealButton.addEventListener('click', function() {
         window.productId = "sku_H0zUx38rUp8z3f"
+        let mealFrequencyDisplay = document.getElementById('mealFrequency')
+        mealFrequencyDisplay.innerHTML = "FOOOO"
       })
 
       buyWeeklySubscriptionButton.addEventListener('click', function() {
         window.productId = "plan_H0zUtlrL5334RL"
+        let mealFrequencyDisplay = document.getElementById('mealFrequency')
+        mealFrequencyDisplay.innerHTML = "BAAAAR"
       })
 
       var stripe = Stripe('pk_test_1Y5uKjzsmVDJgLrVfab9EqMZ003Obla4ca');

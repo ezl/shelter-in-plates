@@ -316,20 +316,20 @@ When making your purchase, please include a message for the hospital staff, your
       const buyWeeklySubscriptionButton = document.getElementById('buyWeeklySubscriptionButton')
 
       buySingleMealButton.addEventListener('click', function() {
-        window.productId = "sku_H0zUx38rUp8z3f"
+        window.productId = "sku_H1NmqIuXOTHj4k"
         let mealFrequencyDisplay = document.getElementById('mealFrequency')
         mealFrequencyDisplay.innerHTML = "One Time"
       })
 
       buyWeeklySubscriptionButton.addEventListener('click', function() {
-        window.productId = "plan_H0zUtlrL5334RL"
+        window.productId = "plan_H1NqheUifPeV86"
         let mealFrequencyDisplay = document.getElementById('mealFrequency')
         mealFrequencyDisplay.innerHTML = "One Meal Every Week"
       })
 
-      var stripe = Stripe('pk_test_1Y5uKjzsmVDJgLrVfab9EqMZ003Obla4ca');
+      var stripe = Stripe('pk_live_7DPpl0oidEBZYCJasQRNQUyN00kNXz2JJu');
 
-      var checkoutButton = document.getElementById('checkout-button-sku_H0zUx38rUp8z3f');
+      var checkoutButton = document.getElementById('checkout-button-sku_H1NmqIuXOTHj4k');
 
       checkoutButton.addEventListener('click', function () {
         var data = {
@@ -346,7 +346,7 @@ When making your purchase, please include a message for the hospital staff, your
 
         let qty = Number(document.getElementsByName('qty')[0].value)
 
-        if (window.productId === "sku_H0zUx38rUp8z3f") {
+        if (window.productId === "sku_H1NmqIuXOTHj4k") {
             data.items = [{sku: window.productId, quantity: qty}]
         } else {
             data.items = [{plan: window.productId, quantity: qty}]

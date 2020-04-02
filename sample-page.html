@@ -133,7 +133,7 @@
                                             <span class="text-muted text-sm">We'll deliver a healthy, nourishing meal to hospital healthcare worker in Chicago on your behalf.</span>
                                             <div class="row align-items-center mt-4">
                                                 <div class="col-sm-6"><span class="text-md mr-4">$11.00 <span class="text-muted">one time</span></span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Buy</span></button></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button id='buySingleMealButton' class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Buy</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -145,7 +145,7 @@
                                             <span class="text-muted text-sm">We'll deliver a healthy, nourishing meal to hospital healthcare worker in Chicago on your behalf.</span>
                                             <div class="row align-items-center mt-4">
                                                 <div class="col-sm-6"><span class="text-md mr-4">$10.00 <span class="text-muted">per week</span> </span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Buy</span></button></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button id='buyWeeklySubscriptionButton' class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Buy</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -247,24 +247,12 @@ When making your purchase, please include a message for the hospital staff, your
                     </h5>
                     <div id="panelDetailsSize">
                         <div class="panel-details-content">
-                            <!-- hi! -->
                             <div class="form-group row">
                                 <label for="qty" class="col-sm-3 col-form-label">Quantity</label>
                                 <div class="col-sm-9">
                                     <input name="qty" type="number" value="1" min="1" class="form-control" required>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">Your e-mail</label>
-                                <div class="col-sm-9">
-                                    <input name="email" type="email" class="form-control" placeholder="username@example.com" required>
-                                </div>
-                                <!--
-                                    <input name="radio_size" type="radio" id="sku_H0zUx38rUp8z3f" class="custom-control-input" checked>
-                                    <input name="radio_size" type="radio" id="plan_H0zUtlrL5334RL" class="custom-control-input" >
-                                -->
-                            </div>
-                            <!-- byte! -->
                         </div>
                     </div>
                 </div>
@@ -288,7 +276,15 @@ When making your purchase, please include a message for the hospital staff, your
                     </div>
                 </div>
             </div>
-            <button id="checkout-button-sku_H0zUx38rUp8z3f" type="button" class="modal-btn btn btn-secondary btn-block btn-lg" data-dismiss="modal"><span>Check Out</span></button>
+            <button
+                    id="checkout-button-sku_H0zUx38rUp8z3f"
+                    type="button"
+                    class="modal-btn btn btn-secondary btn-block btn-lg"
+                    data-dismiss="modal">
+                <span>Check Out</span>
+                <p class="text-muted small mb-0 mt-2">
+                <i class="ti ti-lock"></i> Secure credit card processing with Stripe</p>
+            </button>
         </div>
     </div>
 </div>
@@ -314,14 +310,24 @@ When making your purchase, please include a message for the hospital staff, your
 <script src="https://js.stripe.com/v3"></script>
 <script>
     (function() {
+      window.productId = null
+
+      const buySingleMealButton = document.getElementById('buySingleMealButton')
+      const buyWeeklySubscriptionButton = document.getElementById('buyWeeklySubscriptionButton')
+
+      buySingleMealButton.addEventListener('click', function() {
+        window.productId = "sku_H0zUx38rUp8z3f"
+      })
+
+      buyWeeklySubscriptionButton.addEventListener('click', function() {
+        window.productId = "plan_H0zUtlrL5334RL"
+      })
+
       var stripe = Stripe('pk_test_1Y5uKjzsmVDJgLrVfab9EqMZ003Obla4ca');
-      
+
       var checkoutButton = document.getElementById('checkout-button-sku_H0zUx38rUp8z3f');
 
       checkoutButton.addEventListener('click', function () {
-        var checkedItem = $('input[name="radio_size"]:checked');
-        var checkedItemId = checkedItem.attr('id')
-
         var data = {
           // Do not rely on the redirect to the successUrl for fulfilling
           // purchases, customers may not always reach the success_url after
@@ -334,10 +340,12 @@ When making your purchase, please include a message for the hospital staff, your
           cancelUrl: 'http://localhost:8082/sample-page.html',
         }
 
-        if (checkedItemId.indexOf('sku') >= 0) {
-            data.items = [{sku: checkedItemId, quantity: 1}]
+        let qty = Number(document.getElementsByName('qty')[0].value)
+
+        if (window.productId === "sku_H0zUx38rUp8z3f") {
+            data.items = [{sku: window.productId, quantity: qty}]
         } else {
-            data.items = [{plan: checkedItemId, quantity: 1}]
+            data.items = [{plan: window.productId, quantity: qty}]
         }
 
         // When the customer clicks on the button, redirect

@@ -258,12 +258,12 @@ When making your purchase, please include a message for the hospital staff, your
                     <div id="panelDetailsOther">
                         <div class="panel-details-content">
                             <div class="form-group">
-                                <label class="col-form-label">Your name &amp; what part of town you are from</label>
-                                <input name="nameAndNeighborhood" type="text" class="form-control" placeholder="Eric, Ukranian Village">
+                                <label for="name-and-neighborhood" class="col-form-label">Your name &amp; what part of town you are from</label>
+                                <input name="name-and-neighborhood" id="name-and-neighborhood" type="text" class="form-control" placeholder="Eric, Ukranian Village">
                             </div>
                             <div class="form-group">
-                                <label>Please leave a message for our healthcare workeres!</label>
-                                <textarea name="message" id="message" cols="30" rows="3" class="form-control"></textarea>
+                                <label for="message-for-workers">Please leave a message for our healthcare workers!</label>
+                                <textarea name="message-for-workers" id="message-for-workers" cols="30" rows="3" class="form-control"></textarea>
                             </div>
                         </div>
                     </div>
@@ -298,6 +298,36 @@ When making your purchase, please include a message for the hospital staff, your
 
 <!-- JS Core -->
 <script src="assets/js/core.js"></script>
+
+<script>
+    (function() {
+        var sendMessageToGoogleSpreadsheet = function() {
+            d = new Date()
+            var timestamp = d.toDateString() + " " + d.toTimeString()
+            var name_and_neighborhood = document.getElementById('name-and-neighborhood').value
+            var message = document.getElementById('message-for-workers').value
+            data = {
+              'timestamp': timestamp,
+              'name_and_neighborhood': name_and_neighborhood,
+              'message': message
+            }
+
+            var baseUrl = 'https://script.google.com/macros/s/AKfycbzelPozQBWeoeEB27DJgIgLbv-h1y0ap4tU8jSpG1DI5yorZoU/exec'
+            var querystring = Object.entries(data).map(([key, val]) => `${key}=${val}`).join('&')
+            var url = baseUrl + "?" + querystring
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url);
+            xhr.send(null);
+        }
+        var checkoutButton = document.getElementById('checkout-button-sku_H1NmqIuXOTHj4k');
+
+        checkoutButton.addEventListener('click', function () {
+            sendMessageToGoogleSpreadsheet()
+        })
+
+    })();
+</script>
 
 <!-- Load Stripe.js on your website. -->
 <script src="https://js.stripe.com/v3"></script>

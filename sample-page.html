@@ -123,7 +123,7 @@
                                 </p>
                             </div>
 
-                            <div id="menuBurgersContent" class="menu-category-content padded collapse show">
+                            <div id="menuBurgersContent" class="menu-category-content padded">
                                 <div class="row gutters-sm">
                                     <div class="col-lg-4 col-6">
                                         <!-- Menu Item -->
@@ -133,7 +133,7 @@
                                             <span class="text-muted text-sm">We'll deliver a healthy, nourishing meal to hospital healthcare worker in Chicago on your behalf.</span>
                                             <div class="row align-items-center mt-4">
                                                 <div class="col-sm-6"><span class="text-md mr-4">$11.00 <span class="text-muted">one time</span></span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Buy</span></button></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button id='buySingleMealButton' class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Buy</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -145,7 +145,7 @@
                                             <span class="text-muted text-sm">We'll deliver a healthy, nourishing meal to hospital healthcare worker in Chicago on your behalf.</span>
                                             <div class="row align-items-center mt-4">
                                                 <div class="col-sm-6"><span class="text-md mr-4">$10.00 <span class="text-muted">per week</span> </span></div>
-                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Buy</span></button></div>
+                                                <div class="col-sm-6 text-sm-right mt-2 mt-sm-0"><button id='buyWeeklySubscriptionButton' class="btn btn-outline-secondary btn-sm" data-target="#productModal" data-toggle="modal"><span>Buy</span></button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -227,43 +227,31 @@ When making your purchase, please include a message for the hospital staff, your
         <div class="modal-content">
             <div class="modal-header modal-header-lg dark bg-dark">
                 <div class="bg-image"><img src="assets/img/photos/modal-add.jpg" alt=""></div>
-                <h4 class="modal-title">Order Details</h4>
+                <h4 class="modal-title">Buy A Meal For A Healthcare Hero</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>
             </div>
             <div class="modal-product-details">
                 <div class="row align-items-center">
-                    <div class="col-9">
-                        <h6 class="mb-0">Boscaiola Pasta</h6>
-                        <span class="text-muted">Pasta, Cheese, Tomatoes, Olives</span>
+                    <div class="col-md-12">
+                        <h6 class="mb-1" id="mealFrequency">One Time</h6>
+                        <span class="text-muted">We'll deliver a healthy, nourishing meal on your behalf.</span>
                     </div>
-                    <div class="col-3 text-lg text-right">$9.00</div>
                 </div>
             </div>
             <div class="modal-body panel-details-container">
                 <!-- Panel Details / Size -->
                 <div class="panel-details">
                     <h5 class="panel-details-title">
-                        <label class="custom-control custom-radio">
-                            <input name="radio_title_size" type="radio" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                        </label>
-                        <a href="#panelDetailsSize" data-toggle="collapse">Order</a>
+                        <i class="ti ti-marker-alt"></i>
+                        <span>Your Order</span>
                     </h5>
-                    <div id="panelDetailsSize" class="collapse show">
+                    <div id="panelDetailsSize">
                         <div class="panel-details-content">
-                            <div class="form-group">
-                                <label class="custom-control custom-radio">
-                                    <input name="radio_size" type="radio" id="sku_H0zUx38rUp8z3f" class="custom-control-input" checked>
-                                    <span class="custom-control-indicator"></span>
-                                    <span class="custom-control-description">1 Meal ($11.00)</span>
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <label class="custom-control custom-radio">
-                                    <input name="radio_size" type="radio" id="plan_H0zUtlrL5334RL" class="custom-control-input" >
-                                    <span class="custom-control-indicator"></span>
-                                    <span class="custom-control-description">Weekly Meal Subscription ($10.00/week)</span>
-                                </label>
+                            <div class="form-group row">
+                                <label for="qty" class="col-sm-3 col-form-label">Quantity</label>
+                                <div class="col-sm-9">
+                                    <input name="qty" type="number" value="1" min="1" class="form-control" required>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -271,18 +259,32 @@ When making your purchase, please include a message for the hospital staff, your
                 <!-- Panel Details / Other -->
                 <div class="panel-details">
                     <h5 class="panel-details-title">
-                        <label class="custom-control custom-radio">
-                            <input name="radio_title_other" type="radio" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                        </label>
-                        <a href="#panelDetailsOther" data-toggle="collapse">Leave a Personalized Note</a>
+                        <i class="ti ti-thought"></i>
+                        <span>Leave A Personalized Note</span>
                     </h5>
-                    <div id="panelDetailsOther" class="collapse">
-                        <textarea cols="30" rows="4" class="form-control" placeholder="Please leave a note with your name, what part of town you are from, and a message for the healthcare worker who receives this meal!"></textarea>
+                    <div id="panelDetailsOther">
+                        <div class="panel-details-content">
+                            <div class="form-group">
+                                <label class="col-form-label">Your name &amp; what part of town you are from</label>
+                                <input name="nameAndNeighborhood" type="text" class="form-control" placeholder="Eric, Ukranian Village">
+                            </div>
+                            <div class="form-group">
+                                <label>Please leave a message for our healthcare workeres!</label>
+                                <textarea name="message" id="message" cols="30" rows="3" class="form-control"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button id="checkout-button-sku_H0zUx38rUp8z3f" type="button" class="modal-btn btn btn-secondary btn-block btn-lg" data-dismiss="modal"><span>Check Out</span></button>
+            <button
+                    id="checkout-button-sku_H0zUx38rUp8z3f"
+                    type="button"
+                    class="modal-btn btn btn-secondary btn-block btn-lg"
+                    data-dismiss="modal">
+                <span>Check Out</span>
+                <p class="text-muted small mb-0 mt-2">
+                <i class="ti ti-lock"></i> Secure credit card processing with Stripe</p>
+            </button>
         </div>
     </div>
 </div>
@@ -308,14 +310,28 @@ When making your purchase, please include a message for the hospital staff, your
 <script src="https://js.stripe.com/v3"></script>
 <script>
     (function() {
+      window.productId = null
+
+      const buySingleMealButton = document.getElementById('buySingleMealButton')
+      const buyWeeklySubscriptionButton = document.getElementById('buyWeeklySubscriptionButton')
+
+      buySingleMealButton.addEventListener('click', function() {
+        window.productId = "sku_H0zUx38rUp8z3f"
+        let mealFrequencyDisplay = document.getElementById('mealFrequency')
+        mealFrequencyDisplay.innerHTML = "One Time"
+      })
+
+      buyWeeklySubscriptionButton.addEventListener('click', function() {
+        window.productId = "plan_H0zUtlrL5334RL"
+        let mealFrequencyDisplay = document.getElementById('mealFrequency')
+        mealFrequencyDisplay.innerHTML = "One Meal Every Week"
+      })
+
       var stripe = Stripe('pk_test_1Y5uKjzsmVDJgLrVfab9EqMZ003Obla4ca');
-      
+
       var checkoutButton = document.getElementById('checkout-button-sku_H0zUx38rUp8z3f');
 
       checkoutButton.addEventListener('click', function () {
-        var checkedItem = $('input[name="radio_size"]:checked');
-        var checkedItemId = checkedItem.attr('id')
-
         var data = {
           // Do not rely on the redirect to the successUrl for fulfilling
           // purchases, customers may not always reach the success_url after
@@ -328,10 +344,12 @@ When making your purchase, please include a message for the hospital staff, your
           cancelUrl: 'http://localhost:8082/sample-page.html',
         }
 
-        if (checkedItemId.indexOf('sku') >= 0) {
-            data.items = [{sku: checkedItemId, quantity: 1}]
+        let qty = Number(document.getElementsByName('qty')[0].value)
+
+        if (window.productId === "sku_H0zUx38rUp8z3f") {
+            data.items = [{sku: window.productId, quantity: qty}]
         } else {
-            data.items = [{plan: checkedItemId, quantity: 1}]
+            data.items = [{plan: window.productId, quantity: qty}]
         }
 
         // When the customer clicks on the button, redirect

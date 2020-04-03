@@ -270,7 +270,7 @@ When making your purchase, please include a message for the hospital staff, your
                 </div>
             </div>
             <button
-                    id="checkout-button-sku_H1NmqIuXOTHj4k"
+                    id="checkout-button-sku_H22PTicjZnGInj"
                     type="button"
                     class="modal-btn btn btn-secondary btn-block btn-lg"
                     data-dismiss="modal">
@@ -320,7 +320,7 @@ When making your purchase, please include a message for the hospital staff, your
             xhr.open('GET', url);
             xhr.send(null);
         }
-        var checkoutButton = document.getElementById('checkout-button-sku_H1NmqIuXOTHj4k');
+        var checkoutButton = document.getElementById('checkout-button-sku_H22PTicjZnGInj');
 
         checkoutButton.addEventListener('click', function () {
             sendMessageToGoogleSpreadsheet()
@@ -339,20 +339,20 @@ When making your purchase, please include a message for the hospital staff, your
       const buyWeeklySubscriptionButton = document.getElementById('buyWeeklySubscriptionButton')
 
       buySingleMealButton.addEventListener('click', function() {
-        window.productId = "sku_H1NmqIuXOTHj4k"
+        window.productId = "sku_H22PTicjZnGInj"
         let mealFrequencyDisplay = document.getElementById('mealFrequency')
         mealFrequencyDisplay.innerHTML = "One Time"
       })
 
       buyWeeklySubscriptionButton.addEventListener('click', function() {
-        window.productId = "plan_H1NqheUifPeV86"
+        window.productId = "plan_H22Vwju9g8N0TZ"
         let mealFrequencyDisplay = document.getElementById('mealFrequency')
         mealFrequencyDisplay.innerHTML = "One Meal Every Week"
       })
 
-      var stripe = Stripe('pk_live_7DPpl0oidEBZYCJasQRNQUyN00kNXz2JJu');
+      var stripe = Stripe('pk_live_b6gEE9rOfe9PF2W7sdtYvJQX00jbB4uVDW');
 
-      var checkoutButton = document.getElementById('checkout-button-sku_H1NmqIuXOTHj4k');
+      var checkoutButton = document.getElementById('checkout-button-sku_H22PTicjZnGInj');
 
       checkoutButton.addEventListener('click', function () {
         var data = {
@@ -369,7 +369,7 @@ When making your purchase, please include a message for the hospital staff, your
 
         let qty = Number(document.getElementsByName('qty')[0].value)
 
-        if (window.productId === "sku_H1NmqIuXOTHj4k") {
+        if (window.productId === "sku_H22PTicjZnGInj") {
             data.items = [{sku: window.productId, quantity: qty}]
         } else {
             data.items = [{plan: window.productId, quantity: qty}]

@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import LearnMore from '../views/LearnMore.vue'
 import HelpOut from '../views/HelpOut.vue'
 import Restaurant from '../views/Restaurant.vue'
+import Confirmation from '../views/Confirmation.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,16 @@ const routes = [
     path: '/sample',
     name: 'sample',
     component: Restaurant
+  },
+  {
+    path: '/r/:slug',
+    name: 'restaurant',
+    component: Restaurant
+  },
+  {
+    path: '/confirmation',
+    name: 'confirmation',
+    component: Confirmation
   }
 ]
 

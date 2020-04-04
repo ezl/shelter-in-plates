@@ -5,7 +5,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header modal-header-lg dark bg-dark">
-                        <div class="bg-image"><img src="img/photos/modal-add.jpg" alt=""></div>
+                        <div class="bg-image"><img src="/img/photos/modal-add.jpg" alt=""></div>
                         <h4 class="modal-title">Buy A Meal For A Healthcare Hero</h4>
                         <button type="button" class="close" aria-label="Close" @click="toggleModal()"><i class="ti ti-close"></i></button>
                     </div>
@@ -29,7 +29,7 @@
                                     <div class="form-group row">
                                         <label for="qty" class="col-sm-3 col-form-label">Quantity</label>
                                         <div class="col-sm-9">
-                                            <input name="qty" type="number" value="1" min="1" class="form-control" required v-model="quantity">
+                                            <input name="qty" type="number" value="1" min="1" class="form-control" required v-model.number="quantity">
                                         </div>
                                     </div>
                                 </div>
@@ -59,6 +59,7 @@
                             id="checkout-button-sku_H1NmqIuXOTHj4k"
                             type="button"
                             class="modal-btn btn btn-secondary btn-block btn-lg"
+                            @click="checkOut()"
                             data-dismiss="modal">
                         <span>Check Out</span>
                         <p class="text-muted small mb-0 mt-2">
@@ -77,6 +78,8 @@
     </div>
 </template>
 <script>
+const stripe = Stripe(process.env.VUE_APP_STRIPE_PUBLIC_KEY);
+
 export default {
     data() {
         return {
@@ -95,6 +98,30 @@ export default {
     methods: {
         toggleModal () {
             this.modalToggled = !this.modalToggled
+        },
+        checkOut() {
+            const data = {
+                successUrl: `${window.location.origin}/confirmation`,
+                cancelUrl: window.location.href,
+                //successUrl: "https://www.shelter-in-plates.com/sample-page.html",
+                //cancelUrl: "https://www.shelter-in-plates.com/confirmation.html"
+            }
+
+            if (this.item.type === 'once') {
+                data.items = [{sku: this.item.stripeProductId, quantity: this.quantity}]
+            } else {
+                data.items = [{plan: this.item.stripeProductId, quantity: this.quantity}]
+            }
+
+            stripe.redirectToCheckout(data)
+                .then((result) => {
+                    if (result.error) {
+                    // If `redirectToCheckout` fails due to a browser or network
+                    // error, display the localized error message to your customer.
+                    var displayError = document.getElementById('error-message');
+                    displayError.textContent = result.error.message;
+                    }
+                });
         }
     }
 }

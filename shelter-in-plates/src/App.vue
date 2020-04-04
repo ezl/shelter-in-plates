@@ -11,7 +11,7 @@ export default {
   // Vue instance has loaded and mounted DOM elements
   mounted() {
     let script = document.createElement('script')
-    script.src = "/js/core.js"
+    script.src = `${window.location.origin}/js/core.js`
     document.head.appendChild(script)
     window.Core.Component.tooltip();
   }

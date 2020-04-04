@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="module module-logo dark">
-                            <img src="img/logo-light.svg" alt="" width="88" >
+                            <img src="/img/logo-light.svg" alt="" width="88" >
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -34,7 +34,7 @@
                         </nav>
                     </div>
                     <div class="col-md-2">
-                        <div class="module right">
+                        <div class="module right" v-if="currentRouteName !== 'confirmation'">
                             <a href="https://shelter-in-plates.typeform.com/to/EENdAG" target="_blank" class="btn btn-outline-secondary"><span>Join</span></a>
                         </div>
                     </div>
@@ -49,16 +49,16 @@
             </div>
 
             <div class="module module-logo">
-                <img src="img/logo-horizontal-dark.svg" alt="">
+                <img src="/img/logo-horizontal-dark.svg" alt="">
             </div>
-            <a href="#" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-secondary"><span>Join</span></a>
+            <a v-if="currentRouteName !== 'confirmation'" href="https://shelter-in-plates.typeform.com/to/EENdAG" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-secondary"><span>Join</span></a>
         </header>
 
             <!-- Panel Mobile -->
         <nav id="panel-mobile">
             <div class="module module-logo bg-dark dark">
                 <a href="#">
-                    <img src="img/logo-light.svg" alt="" width="88">
+                    <img src="/img/logo-light.svg" alt="" width="88">
                 </a>
                 <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
             </div>

@@ -2,7 +2,7 @@
   <div id="content">
     <!-- Page Title -->
     <div class="page-title bg-light">
-        <div class="bg-image bg-parallax"><img src="img/photos/bg-desk.jpg" alt=""></div>
+        <div class="bg-image bg-parallax"><img src="/img/photos/bg-desk.jpg" alt=""></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 push-lg-4">

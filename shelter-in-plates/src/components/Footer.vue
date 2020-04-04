@@ -8,7 +8,10 @@
                         <img src="/img/logo-light.svg" alt="" width="40">
                     </router-link>
                 </div>
-                <div class="col-lg-10 col-md-12 text-center text-lg-right pt-2 pb-2">
+                <div class="col-lg-5 col-md-12 text-center text-lg-right pt-2 pb-2">
+                    <div>Shelter-In-Plates <span class='chicago-flag-blue'>&#x235F;</span> Feed the Front Line</div>
+                </div>
+                <div class="col-lg-5 col-md-12 text-center text-lg-right pt-2 pb-2">
                     <div>Made with ❤️ in Chicago</div>
                 </div>
             </div>
@@ -20,6 +23,8 @@ export default {
     
 }
 </script>
-<style lang="scss">
-
+<style scoped lang="scss">
+.chicago-flag-blue {
+  color: #B3DDF2;
+}
 </style>

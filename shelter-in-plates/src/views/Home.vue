@@ -134,7 +134,4 @@ export default {
 }
 </script>
 <style lang="scss">
-body {
-    margin-left: 0px;
-}
 </style>

@@ -575,6 +575,7 @@ Core.Basic.pageTransition();
 
 $(document).ready(function (){   
     Core.init();
+    window.Core = Core;
 });
 
 // Hide Dropdown

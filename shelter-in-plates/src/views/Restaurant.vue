@@ -143,6 +143,7 @@ export default {
         if (this.$route.params.slug) {
             this.restaurant = restaurants[this.$route.params.slug]
         }
+        window.document.title = "Join " + this.restaurant.name + " and Shelter-in-Plates in Feeding the Front Line"
     },
     data() {
         return {

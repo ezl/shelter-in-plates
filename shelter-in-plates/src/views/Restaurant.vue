@@ -50,7 +50,7 @@
                                             <span class="text-muted text-sm">{{ item.description }}</span>
                                             <div class="row align-items-center mt-4">
                                                 <div class="col-sm-6"><span class="text-md mr-4">{{ item.price | currency }} <span class="text-muted">{{ item.type === 'once' ? 'one time' : 'weekly' }}</span></span></div>
-                                                <buy-modal :item="item" />
+                                                <buy-modal :item="item" :restaurant="restaurant" />
                                             </div>
                                         </div>
                                     </div>

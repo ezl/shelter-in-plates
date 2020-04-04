@@ -90,6 +90,10 @@ export default {
         }
     },
     props: {
+        restaurant: {
+            type: Object,
+            required: true
+        },
         item: {
             type: Object,
             required: true
@@ -104,6 +108,7 @@ export default {
             const timestamp = d.toDateString() + " " + d.toTimeString()
             const data = {
               'timestamp': timestamp,
+              'restaurant': this.restaurant.name,
               'from': this.from,
               'message': this.message
             }

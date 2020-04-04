@@ -67,16 +67,21 @@
                         <div class="example-box">
                             <div class="example-box-title">Contributors</div>
                             <div class="example-box-content">
+                                <img src="/img/avatars/aalap.png" alt="Aalap" class="img-thumbnail">
                                 <img src="/img/avatars/alex.jpg" alt="Alex" class="img-thumbnail">
                                 <img src="/img/avatars/alexa.jpg" alt="Alexa" class="img-thumbnail">
                                 <img src="/img/avatars/anthony.jpg" alt="Anthony" class="img-thumbnail">
                                 <img src="/img/avatars/eric.jpg" alt="Eric" class="img-thumbnail">
+                                <img src="/img/avatars/greg.png" alt="Greg" class="img-thumbnail">
                                 <img src="/img/avatars/henry.jpg" alt="Henry" class="img-thumbnail">
+                                <img src="/img/avatars/jessica.png" alt="Jessica" class="img-thumbnail">
                                 <img src="/img/avatars/john2.jpg" alt="John" class="img-thumbnail">
+                                <img src="/img/avatars/justin.png" alt="Justin" class="img-thumbnail">
                                 <img src="/img/avatars/melodie.jpg" alt="Melodie" class="img-thumbnail">
                                 <img src="/img/avatars/mg.jpg" alt="Mary Grace" class="img-thumbnail">
                                 <img src="/img/avatars/robin.jpg" alt="Robin" class="img-thumbnail">
                                 <img src="/img/avatars/shane.jpg" alt="Shane" class="img-thumbnail">
+                                <img src="/img/avatars/stan.png" alt="Stan" class="img-thumbnail">
                             </div>
                         </div>
                     </div>

@@ -99,7 +99,27 @@ export default {
         toggleModal () {
             this.modalToggled = !this.modalToggled
         },
+        savePersonalMessage() {
+            const d = new Date()
+            const timestamp = d.toDateString() + " " + d.toTimeString()
+            const data = {
+              'timestamp': timestamp,
+              'from': this.from,
+              'message': this.message
+            }
+
+            // Saves to https://docs.google.com/spreadsheets/d/1KZVZqORT7hjG-I685c5ZbQV8ZQyqMjoWOESwhQ-T3og/edit#gid=0
+            const googleSheetUrl = 'https://script.google.com/macros/s/AKfycbzelPozQBWeoeEB27DJgIgLbv-h1y0ap4tU8jSpG1DI5yorZoU/exec'
+            const querystring = Object.entries(data).map(([key, val]) => `${key}=${val}`).join('&')
+            const url = googleSheetUrl + "?" + querystring
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', url);
+            xhr.send(null);
+        },
         checkOut() {
+            this.savePersonalMessage()
+
             const data = {
                 successUrl: `${window.location.origin}/confirmation`,
                 cancelUrl: window.location.href,

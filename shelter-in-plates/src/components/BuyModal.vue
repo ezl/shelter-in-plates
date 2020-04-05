@@ -5,7 +5,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header modal-header-lg dark bg-dark">
-                        <div class="bg-image"><img src="/img/photos/modal-add.jpg" alt=""></div>
+                        <div class="bg-image"><img src="/img/photos/bg.png" alt=""></div>
                         <h4 class="modal-title">Buy A Meal For A Healthcare Hero</h4>
                         <button type="button" class="close" aria-label="Close" @click="toggleModal()"><i class="ti ti-close"></i></button>
                     </div>

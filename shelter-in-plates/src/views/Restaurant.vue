@@ -107,7 +107,7 @@ const restaurants = {
             stripeProductId: "plan_H22Vwju9g8N0TZ"
         }],
         bottomMessage: "",
-        owner: "Henry, Owner",
+        owner: "Henry Cerdas",
         signImageUrl: "/img/svg/sign.svg"
     },
     'spoke-and-bird': {

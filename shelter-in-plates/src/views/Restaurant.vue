@@ -6,8 +6,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 push-lg-4">
-                        <h1 class="mb-0">{{ restaurant.title }}</h1>
-                        <h4 class="text-muted mb-0">Join {{ restaurant.name }} in Helping Hospital Workers Fight This Pandemic</h4>
+                        <h1 class="mb-2">{{ restaurant.title }}</h1>
+                        <h4 class="mb-0">Join {{ restaurant.name }} in Helping Hospital Workers Fight Covid-19</h4>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                         <!-- Menu Category / Burgers -->
                         <div id="Burgers" class="menu-category">
                             <div class="restaurant-page-message row">
-                                <div v-if="restaurant.logoUrl" class="col-md-3">
+                                <div v-if="restaurant.logoUrl" class="col-md-3 col-6 mx-auto pb-4">
                                     <img class="img" :src="restaurant.logoUrl" />
                                 </div>
                                 <div :class="{'col-md-12': !restaurant.logoUrl, 'col-md-9': restaurant.logoUrl }">

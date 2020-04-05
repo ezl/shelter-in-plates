@@ -83,7 +83,6 @@ When making your purchase, please include a message for the hospital staff, your
     </div>
 </template>
 <script>
-
 import restaurants from "./restaurants"
 
 export default {

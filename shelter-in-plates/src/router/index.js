@@ -36,7 +36,7 @@ const routes = [
     component: Restaurant
   },
   {
-    path: '/confirmation',
+    path: '/r/:slug/confirmation',
     name: 'confirmation',
     component: Confirmation
   },

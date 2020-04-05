@@ -18,8 +18,8 @@
                         <p>This makes a <strong>huge</strong> difference!</p>
                         <div class="row mb-4">
                             <div class="module-social m-auto share-links">
-                                <a :href="facebookShareUrl" @click.stop class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-                                <a :href="twitterShareUrl" @click.stop class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
+                                <a :href="facebookShareUrl" _target="blank"  @click.stop class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
+                                <a :href="twitterShareUrl" _target="blank" @click.stop class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
                             </div>
                         </div>
                         <h3>What's Next</h3>
@@ -43,7 +43,20 @@
     </div>
 </template>
 <script>
+import restaurants from "./restaurants"
+
 export default {
+    created() {
+        let slug = this.$route.params.slug
+
+        if (slug !== undefined) {
+            if (!restaurants.hasOwnProperty(slug)) {
+                this.$router.push({name: 'not-found'})
+            }
+
+            this.restaurant = restaurants[slug]
+        }
+    },
     data() {
         return {
             restaurant: {
@@ -65,7 +78,7 @@ export default {
             return base + path;
         },
         message() {
-            const quote = "One of my favorite local restaurants, " + this.restaurant.name + ", is selling meals to feed frontline healthcare workers fighting Coronavirus. Join me in supporting them at " + this.restaurantUrl
+            const quote = encodeURIComponent("One of my favorite local restaurants, " + this.restaurant.name + ", is selling meals to feed frontline healthcare workers fighting Coronavirus. Join me in supporting them at " + this.restaurantUrl)
             return quote
         },
         twitterShareUrl() {
@@ -75,7 +88,7 @@ export default {
         },
         facebookShareUrl() {
             const base = "https://www.facebook.com/share.php?"
-            const shareUrl = "u=" + this.restaurantUrl
+            const shareUrl = "u=" + encodeURIComponent(this.restaurantUrl)
             const message = "&quote=" + this.message
             return base + shareUrl + message
         }

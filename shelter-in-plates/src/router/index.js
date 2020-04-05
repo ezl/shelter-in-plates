@@ -5,6 +5,7 @@ import LearnMore from '../views/LearnMore.vue'
 import HelpOut from '../views/HelpOut.vue'
 import Restaurant from '../views/Restaurant.vue'
 import Confirmation from '../views/Confirmation.vue'
+import NotFound from '../views/NotFound.vue'
 
 Vue.use(VueRouter)
 
@@ -38,7 +39,13 @@ const routes = [
     path: '/confirmation',
     name: 'confirmation',
     component: Confirmation
+  },
+  {
+    path: '*',
+    name: 'not-found',
+    component: NotFound
   }
+
 ]
 
 const router = new VueRouter({
@@ -46,5 +53,6 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
 
 export default router

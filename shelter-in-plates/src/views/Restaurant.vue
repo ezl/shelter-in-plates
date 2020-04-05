@@ -123,14 +123,14 @@ const restaurants = {
             type: "once",
             description: "We'll deliver a healthy, nourishing meal to hospital healthcare worker in Chicago on your behalf.",
             price: 10.00,
-            stripeProductId: "sku_H2L0w9TIEYkoZ6"
+            stripeProductId: "sku_H2ULIbt8AAT8Is"
         },{
             imageUrl: "/img/restaurants/spoke-and-bird/spoke-and-bird-2.png",
             name: "Buy a meal for a healthcare worker: Weekly",
             type: "weekly",
             description: "We'll deliver a healthy, nourishing meal to hospital healthcare worker in Chicago on your behalf.",
             price: 10.00,
-            stripeProductId: "plan_H2L1AyfbOkKKx0"
+            stripeProductId: "plan_H2UNsOcyLYMf8R"
         }],
         bottomMessage: "",
         owner: "Scott, Owner",

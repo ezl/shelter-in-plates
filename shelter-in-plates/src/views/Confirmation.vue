@@ -23,9 +23,9 @@
                             </div>
                         </div>
                         <h3>What's Next</h3>
-                        <p>Your meal will be prepared and delivered to a local hospital in the coming days days.</p>
+                        <p>Your meal will be prepared by <a class="link" :href="restaurant.link" target="_blank">{{ restaurant.name }}</a> and delivered to a local hospital in the coming days days.</p>
                         <p>After the meal is delivered, we will send you confirmation to let you know when and where it was delivered.</p>
-                        <p>If you have purchased a subscription, then you will be notified every time a meal is delivered. If you want to cancel at any time, please just email us at admin@shelter-in-plates.com.</p>
+                        <p>If you have purchased a subscription, then you will be notified every time a meal is delivered. If you want to cancel at any time, please just email us at <a class="link" href="mailto:admin@shelter-in-plates.com">admin@shelter-in-plates.com.</a></p>
 
                         <!-- 
                         <h3>How can you help?</h3>
@@ -112,6 +112,10 @@ li, p {
   margin: 1rem 2rem;
 }
 
+a.link {
+    font-weight: 500;
+    text-decoration: underline;
+}
 a.icon {
     cursor: pointer;
 

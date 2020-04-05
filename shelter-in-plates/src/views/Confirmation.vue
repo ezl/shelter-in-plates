@@ -17,10 +17,9 @@
                         <p>Ask your friends to join you in supporting frontline healthcare workers &amp; independent restaurants.</p>
                         <p>This makes a <strong>huge</strong> difference!</p>
                         <div class="row mb-4">
-                            <div class="module-social m-auto">
-                                <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
+                            <div class="module-social m-auto share-links">
+                                <a :href="facebookShareUrl" @click.stop class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
+                                <a :href="twitterShareUrl" @click.stop class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
                             </div>
                         </div>
                         <h3>What's Next</h3>
@@ -54,7 +53,31 @@ export default {
                 link: "http://irazuchicago.com/",
                 logoUrl: "/img/restaurants/irazu/logo.png",
             },
-            url: 'https://www.shelter-in-plates.com/r/irazu/' // how can I make router reverse resolve the full url?
+        }
+    },
+    computed: {
+        restaurantUrl() {
+            const base = "https://www.shelter-in-plates.com"
+            const path = this.$router.resolve({
+                    name: 'restaurant',
+                    params: {slug: this.restaurant.slug }
+                }).route.fullPath
+            return base + path;
+        },
+        message() {
+            const quote = "One of my favorite local restaurants, " + this.restaurant.name + ", is selling meals to feed frontline healthcare workers fighting Coronavirus. Join me in supporting them at " + this.restaurantUrl
+            return quote
+        },
+        twitterShareUrl() {
+            const base = "https://twitter.com/intent/tweet?"
+            const shareUrl = base + 'text=' + this.message
+            return shareUrl
+        },
+        facebookShareUrl() {
+            const base = "https://www.facebook.com/share.php?"
+            const shareUrl = "u=" + this.restaurantUrl
+            const message = "&quote=" + this.message
+            return base + shareUrl + message
         }
     }
 }
@@ -76,19 +99,25 @@ li, p {
   margin: 1rem 2rem;
 }
 
-a.icon.icon-circle.icon-instagram {
-  background-color: #4f86ac;
-  color: white;
-}
-a.icon.icon-circle.icon-twitter {
-  background-color: #3aa8db;
-  color: white;
-}
-a.icon.icon-circle.icon-facebook {
-  background-color: #3b5998;
-  color: white;
-}
-a.icon.icon-circle:hover {
-  background-color: #aaa;
+a.icon {
+    cursor: pointer;
+
+    &.icon-circle {
+        color: white;
+
+        &:hover {
+          background-color: #aaa;
+        }
+    }
+
+    &.icon-instagram {
+        background-color: #4f86ac;
+    }
+    &.icon-twitter {
+        background-color: #3aa8db;
+    }
+    &.icon-facebook {
+        background-color: #3b5998;
+    }
 }
 </style>

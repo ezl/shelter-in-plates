@@ -125,8 +125,15 @@ export default {
         checkOut() {
             this.savePersonalMessage()
 
+            const path = this.$router.resolve({
+                    name: 'confirmation',
+                    params: {slug: this.restaurant.slug }
+                }).route.fullPath
+
+            const successUrl = `${window.location.origin}${path}`
+
             const data = {
-                successUrl: `${window.location.origin}/confirmation`,
+                successUrl: successUrl,
                 cancelUrl: window.location.href,
                 //successUrl: "https://www.shelter-in-plates.com/sample-page.html",
                 //cancelUrl: "https://www.shelter-in-plates.com/confirmation.html"

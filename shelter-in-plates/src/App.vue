@@ -12,10 +12,11 @@ export default {
   mounted() {
     let script = document.createElement('script')
     script.src = `${window.location.origin}/js/core.js`
+    script.onload = () => {
+      window.Core.Component.tooltip();
+    }
     document.head.appendChild(script)
-    window.Core.Component.tooltip();
   }
-  
 }
 </script>
 <style lang="scss">

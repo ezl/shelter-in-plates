@@ -12,23 +12,8 @@
                     <div class="col-md-7">
                         <nav class="module module-navigation left mr-4">
                             <ul id="nav-main" class="nav nav-main">
-                                <li :class="{ selected: currentRouteName === 'home' }">
-                                    <router-link :to="{ name: 'home' }" tag="a">Home</router-link>
-                                </li>
-                                <li :class="{ selected: currentRouteName === 'learn_more' }">
-                                    <router-link :to="{ name: 'learn_more' }" tag="a">
-                                        Restaurants: Learn More
-                                    </router-link>
-                                </li>
-                                <li :class="{ selected: currentRouteName === 'help_out' }">
-                                    <router-link :to="{ name: 'help_out' }" tag="a">
-                                        Diners: Help Out
-                                    </router-link>
-                                </li>
-                                <li :class="{ selected: currentRouteName === 'sample' }">
-                                    <router-link :to="{ name: 'sample' }" tag="a">
-                                        Sample
-                                    </router-link>
+                                <li v-for="link in navLinks" :key="link.text" :class="{ selected: currentRouteName === link.value }">
+                                    <router-link :to="{ name: link.value }" tag="a">{{ link.text }}</router-link>
                                 </li>
                             </ul>
                         </nav>
@@ -80,6 +65,30 @@ export default {
     computed: {
         currentRouteName() {
             return this.$route.name
+        },
+        navLinks() {
+            if(this.currentRouteName === 'restaurant') {
+                return this.defaultLinks.filter(link => link.value === 'home')
+            } else {
+                return this.defaultLinks
+            }
+        }
+    },
+    data () {
+        return {
+            defaultLinks: [{
+                text: "Home",
+                value: "home"
+            },{
+                text: "Restaurants: Learn More",
+                value: "learn_more"
+            },{
+                text: "Diners: Help Out",
+                value: "help_out"
+            }, {
+                text: "Sample",
+                value: "sample"
+            }]
         }
     }
 }

@@ -97,7 +97,7 @@ export default {
             this.restaurant = restaurants[slug]
         }
         // Update title and meta tag
-        const title = `Join ${this.restaurant.name} and Shelter-in-Plates in Feeding the Front Line`
+        const title = `❤️ Join ${this.restaurant.name} and Shelter-in-Plates in Feeding the Front Line`
         window.document.title = title
         const ogTitleTag = document.querySelector('head meta[property="og:title"]');
         ogTitleTag.setAttribute('content', title)
@@ -106,7 +106,8 @@ export default {
         const ogDescriptionTag = document.querySelector('head meta[property="og:description"]');
         ogDescriptionTag.setAttribute('content', description)
 
-        const imageUrl = this.restaurant.openGraphImageUrl
+        const baseUrl = "https://www.shelter-in-plates.com"
+        const imageUrl = baseUrl + this.restaurant.openGraphImageUrl
         const ogImageTag = document.querySelector('head meta[property="og:image"]');
         ogImageTag.setAttribute('content', imageUrl)
     },

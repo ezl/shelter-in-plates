@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 push-lg-4">
-                        <h1 class="mb-2">{{ restaurant.title }}</h1>
+                        <h1 class="mb-2" :class="restaurant.restaurantFontClass">{{ restaurant.title }}</h1>
                         <h4 class="mb-0">Join {{ restaurant.name }} in Helping Hospital Workers Fight Covid-19</h4>
                     </div>
                 </div>
@@ -157,5 +157,15 @@ export default {
 }
 img.restaurant-signature {
     max-height: 120px;
+}
+
+@font-face {
+    /* Spoke & Bird */
+    font-family: 'Albatross+-+CasterOne';
+    src: url('/fonts/Albatross+-+CastorOne.otf'); /*URL to font*/
+}
+
+.spokeAndBirdFont {
+    font-family: 'Albatross+-+CasterOne';
 }
 </style>

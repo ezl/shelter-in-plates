@@ -29,6 +29,7 @@ const restaurants = {
     'spoke-and-bird': {
         headerImageUrl:"/img/restaurants/spoke-and-bird/spoke-and-bird-background.png",
         title: "Spoke & Bird",
+        restaurantFontClass: 'spokeAndBirdFont',
         name: "Spoke & Bird",
         slug: "spoke-and-bird",
         logoUrl: "/img/restaurants/spoke-and-bird/logo.png",

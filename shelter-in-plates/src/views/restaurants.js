@@ -6,6 +6,7 @@ const restaurants = {
         slug: "irazu",
         link: "http://irazuchicago.com/",
         logoUrl: "/img/restaurants/irazu/logo.png",
+        openGraphImageUrl: "/img/restaurants/irazu/irazu-preview.png",
         menuItems: [{
             imageUrl: "/img/restaurants/irazu/irazu-1.png",
             name: "Buy a meal for a healthcare worker: Once",
@@ -32,6 +33,7 @@ const restaurants = {
         slug: "spoke-and-bird",
         logoUrl: "/img/restaurants/spoke-and-bird/logo.png",
         link: "https://www.spokeandbird.com",
+        openGraphImageUrl: "/img/restaurants/spoke-and-bird/spoke-and-bird-preview.png",
         menuItems: [{
             imageUrl: "/img/restaurants/spoke-and-bird/spoke-and-bird-1.png",
             name: "Buy a meal for a healthcare worker: Once",

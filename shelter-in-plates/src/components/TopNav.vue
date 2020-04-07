@@ -19,7 +19,7 @@
                         </nav>
                     </div>
                     <div class="col-md-2">
-                        <div class="module right" v-if="currentRouteName !== 'confirmation'">
+                        <div class="module right" v-if="displayJoinButton">
                             <a href="https://shelter-in-plates.typeform.com/to/EENdAG" target="_blank" class="btn btn-outline-secondary"><span>Join</span></a>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
             <div class="module module-logo">
                 <img src="/img/logo-horizontal-dark.svg" alt="">
             </div>
-            <a v-if="currentRouteName !== 'confirmation'" href="https://shelter-in-plates.typeform.com/to/EENdAG" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-secondary"><span>Join</span></a>
+            <a v-if="displayJoinButton" href="https://shelter-in-plates.typeform.com/to/EENdAG" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-secondary"><span>Join</span></a>
         </header>
 
             <!-- Panel Mobile -->
@@ -48,14 +48,6 @@
                 <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
             </div>
             <nav class="module module-navigation"></nav>
-            <div class="module module-social">
-                <h6 class="text-sm mb-3">Follow Us!</h6>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-google"><i class="fa fa-google"></i></a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-youtube"><i class="fa fa-youtube"></i></a>
-                <a href="#" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
-            </div>
         </nav>
     </div>
 </template>
@@ -65,6 +57,9 @@ export default {
     computed: {
         currentRouteName() {
             return this.$route.name
+        },
+        displayJoinButton() {
+            return !['confirmation', 'restaurant'].includes(this.currentRouteName)
         },
         navLinks() {
             if(this.currentRouteName === 'restaurant') {

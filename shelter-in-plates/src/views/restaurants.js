@@ -48,7 +48,7 @@ const restaurants = {
             stripeProductId: "plan_H2UNsOcyLYMf8R"
         }],
         bottomMessage: "",
-        owner: "Scott, Owner",
+        owner: "Alicia, Owner",
         signImageUrl: "/img/svg/sign.svg"
     }
 }

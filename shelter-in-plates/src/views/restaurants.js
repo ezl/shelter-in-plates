@@ -26,7 +26,7 @@ const restaurants = {
         signImageUrl: "/img/restaurants/irazu/henry-signature.png"
     },
     'spoke-and-bird': {
-        headerImageUrl:"/img/photos/bg-croissant.jpg",
+        headerImageUrl:"/img/restaurants/spoke-and-bird/spoke-and-bird-background.png",
         title: "Spoke & Bird",
         name: "Spoke & Bird",
         slug: "spoke-and-bird",
@@ -40,7 +40,7 @@ const restaurants = {
             price: 10.00,
             stripeProductId: "sku_H2ULIbt8AAT8Is"
         },{
-            imageUrl: "/img/restaurants/spoke-and-bird/spoke-and-bird-2.png",
+            imageUrl: "/img/restaurants/spoke-and-bird/spoke-and-bird-3.png",
             name: "Buy a meal for a healthcare worker: Weekly",
             type: "weekly",
             description: "We'll deliver a healthy, nourishing meal to hospital healthcare worker in Chicago on your behalf.",

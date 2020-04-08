@@ -52,7 +52,7 @@ const restaurants = {
         }],
         bottomMessage: "",
         owner: "Alicia, Owner",
-        signImageUrl: "/img/svg/sign.svg"
+        signImageUrl: null
     }
 }
 

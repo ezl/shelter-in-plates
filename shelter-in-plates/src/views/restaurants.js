@@ -1,12 +1,12 @@
 const restaurants = {
     irazu: {
-        headerImageUrl:"/img/restaurants/irazu/irazu-background.png",
+        headerImageUrl:"/img/restaurants/irazu/irazu-background.jpg",
         title: "Irazú: Costa Rican Restaurant",
         name: "Irazú",
         slug: "irazu",
         link: "http://irazuchicago.com/",
         logoUrl: "/img/restaurants/irazu/logo.png",
-        openGraphImageUrl: "/img/restaurants/irazu/irazu-preview.png",
+        openGraphImageUrl: "/img/restaurants/irazu/irazu-preview.jpg",
         menuItems: [{
             imageUrl: "/img/restaurants/irazu/irazu-1.png",
             name: "Buy a meal for a healthcare worker: Once",
@@ -27,14 +27,14 @@ const restaurants = {
         signImageUrl: "/img/restaurants/irazu/henry-signature.png"
     },
     'spoke-and-bird': {
-        headerImageUrl:"/img/restaurants/spoke-and-bird/spoke-and-bird-background.png",
+        headerImageUrl:"/img/restaurants/spoke-and-bird/spoke-and-bird-background.jpg",
         title: "Spoke & Bird",
         restaurantFontClass: 'spokeAndBirdFont',
         name: "Spoke & Bird",
         slug: "spoke-and-bird",
         logoUrl: "/img/restaurants/spoke-and-bird/logo.png",
         link: "https://www.spokeandbird.com",
-        openGraphImageUrl: "/img/restaurants/spoke-and-bird/spoke-and-bird-preview.png",
+        openGraphImageUrl: "/img/restaurants/spoke-and-bird/spoke-and-bird-preview.jpg",
         menuItems: [{
             imageUrl: "/img/restaurants/spoke-and-bird/spoke-and-bird-1.png",
             name: "Buy a meal for a healthcare worker: Once",

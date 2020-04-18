@@ -7,7 +7,10 @@ module.exports = {
             config.plugins.push(
                 new PrerenderSPAPlugin({
                     staticDir: path.join(__dirname, 'dist'),
-                    routes: [ '/r/irazu', '/r/spoke-and-bird'],
+                    routes: [
+                        '/r/rooh',
+                        '/r/irazu',
+                        '/r/spoke-and-bird'],
                 })
             )
         }

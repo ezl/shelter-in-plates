@@ -168,4 +168,8 @@ img.restaurant-signature {
 .spokeAndBirdFont {
     font-family: 'Albatross+-+CasterOne';
 }
+.roohFont {
+    font-weight: 900;
+    color: #F0CF87;
+}
 </style>

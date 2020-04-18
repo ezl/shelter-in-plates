@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="module module-logo dark">
-                            <img src="/img/logo-light.svg" alt="" width="88" >
+                            <img src="/img/logo-light-fulltext.svg" alt="" width="88" >
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -34,7 +34,7 @@
             </div>
 
             <div class="module module-logo">
-                <img src="/img/logo-horizontal-dark.svg" alt="">
+                <img src="/img/logo-superimposed-dark-fulltext.svg" alt="">
             </div>
             <a v-if="displayJoinButton" href="https://shelter-in-plates.typeform.com/to/EENdAG" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-secondary"><span>Join</span></a>
         </header>
@@ -43,7 +43,7 @@
         <nav id="panel-mobile">
             <div class="module module-logo bg-dark dark">
                 <a href="#">
-                    <img src="/img/logo-light.svg" alt="" width="88">
+                    <img src="/img/logo-light-fulltext.svg" alt="" width="88">
                 </a>
                 <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
             </div>

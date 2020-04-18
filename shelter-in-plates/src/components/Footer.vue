@@ -5,7 +5,7 @@
             <div class="row align-items-center pt-2 pb-2">
                 <div class="col-lg-2 text-center text-lg-left pt-2 pb-2">
                     <router-link :to="{ name: 'home'}" tag="a">
-                        <img src="/img/logo-light.svg" alt="" width="40">
+                        <img src="/img/logo-light-fulltext.svg" alt="" width="40">
                     </router-link>
                 </div>
                 <div class="col-lg-5 col-md-12 text-center text-lg-right pt-2 pb-2">

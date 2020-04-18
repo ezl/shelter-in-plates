@@ -1,4 +1,32 @@
 const restaurants = {
+    'rooh': {
+        headerImageUrl:"/img/restaurants/rooh/rooh-background.png",
+        title: "ROOH",
+        restaurantFontClass: 'roohFont',
+        name: "ROOH",
+        slug: "rooh",
+        link: "https://www.roohchicago.com/",
+        logoUrl: "/img/restaurants/rooh/rooh-logo.png",
+        openGraphImageUrl: "/img/default-preview.png",
+        menuItems: [{
+            imageUrl: "/img/restaurants/rooh/rooh-1.png",
+            name: "Buy a meal for a healthcare worker: Once",
+            type: "once",
+            description: "We'll deliver a healthy, nourishing meal to hospital healthcare worker in Chicago on your behalf.",
+            price: 14.00,
+            stripeProductId: "sku_H7M4OPS9nnwB3o"
+        },{
+            imageUrl: "/img/restaurants/rooh/rooh-2.png",
+            name: "Buy a meal for a healthcare worker: Weekly",
+            type: "weekly",
+            description: "We'll deliver a healthy, nourishing meal to hospital healthcare worker in Chicago on your behalf.",
+            price: 14.00,
+            stripeProductId: "plan_H7MCLxBa8rN6Td"
+        }],
+        bottomMessage: "",
+        owner: "Manish & Rina Mallick",
+        signImageUrl: "/img/restaurants/irazu/henry-signature.png"
+    },
     irazu: {
         headerImageUrl:"/img/restaurants/irazu/irazu-background.png",
         title: "Irazú: Costa Rican Restaurant",

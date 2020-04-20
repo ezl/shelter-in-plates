@@ -118,6 +118,18 @@ export default {
         if(window.Core) {
             window.Core.navigation()
         }
+        this.setEntryRestaurant()
+
+    },
+    methods: {
+        setEntryRestaurant() {
+            if (!window.sessionStorage.entryRestaurantPath) {
+                window.sessionStorage.entryRestaurantPath = this.$router.currentRoute.path
+            }
+            if (!window.sessionStorage.entryRestaurantName) {
+                window.sessionStorage.entryRestaurantName = this.restaurant.name
+            }
+        }
     },
     data() {
         return {

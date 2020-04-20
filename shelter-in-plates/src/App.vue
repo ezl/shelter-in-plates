@@ -3,6 +3,7 @@
     <top-nav />
     <router-view/>
     <app-footer />
+    <back-to-restaurant-banner />
   </div>
 </template>
 <script>

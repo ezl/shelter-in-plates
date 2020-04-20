@@ -122,7 +122,11 @@ export default {
             xhr.open('GET', url);
             xhr.send(null);
         },
+        clearEntryRestaurant() {
+            window.sessionStorage.clear()
+        },
         checkOut() {
+            this.clearEntryRestaurant()
             this.savePersonalMessage()
 
             const path = this.$router.resolve({

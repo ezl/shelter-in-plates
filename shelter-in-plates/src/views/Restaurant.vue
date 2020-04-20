@@ -40,7 +40,7 @@
                                 </div>
                             </div>
 
-                            <div id="menuBurgersContent" class="menu-category-content padded">
+                            <div id="menuBurgersContent" class="row menu-category-content padded">
                                 <div class="row gutters-sm">
                                     <div class="col-lg-4 col-6" v-for="item in restaurant.menuItems" :key="item.name">
                                         <!-- Menu Item -->
@@ -56,7 +56,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="restaurant-page-message">
+                            <div class="row restaurant-page-message">
 
                                 <p>
 When making your purchase, please include a message for the hospital staff, your name, and what part of town you are from. We hope to provide these people with the sense that the whole city is behind them.

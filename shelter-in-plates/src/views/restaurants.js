@@ -25,7 +25,7 @@ const restaurants = {
         }],
         bottomMessage: "",
         owner: "Manish & Rina Mallick",
-        signImageUrl: "/img/restaurants/irazu/henry-signature.png"
+        signImageUrl: "/img/restaurants/spoke-and-bird/spoke-and-bird-signature.svg"
     },
     irazu: {
         headerImageUrl:"/img/restaurants/irazu/irazu-background.png",
@@ -79,8 +79,8 @@ const restaurants = {
             stripeProductId: "plan_H2UNsOcyLYMf8R"
         }],
         bottomMessage: "",
-        owner: "Alicia, Owner",
-        signImageUrl: null
+        owner: "Alicia & Scott",
+        signImageUrl: "/img/restaurants/spoke-and-bird/spoke-and-bird-signature.svg"
     }
 }
 

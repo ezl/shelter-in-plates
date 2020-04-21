@@ -72,8 +72,10 @@ When making your purchase, please include a message for the hospital staff, your
                                     <li>we will also keep you up to date with when and where your meals are delivered</li>
                                   </ul>
                                 </p>
+                              <div id="owner-signature">
                                 <img v-if="restaurant.signImageUrl" :src="restaurant.signImageUrl" alt="" class="restaurant-signature mb-5">
                                 <h6>{{ restaurant.owner }}</h6>
+                              </div>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 <template>
-    <div id="banner" v-if="entryRestaurantPageIsSet && !userIsOnEntryRestaurantPage">
+    <div id="banner"
+      v-if="entryRestaurantPageIsSet && !userIsOnRestaurantPage">
       <router-link :to="path" tag="a">
           <span>Buy A Meal From {{ name }}</span>
       </router-link>
@@ -11,11 +12,8 @@ export default {
     entryRestaurantPageIsSet() {
       return !(window.sessionStorage.entryRestaurantPath === undefined)
     },
-    userIsOnEntryRestaurantPage() {
-      if (this.$router.currentRoute.path === window.sessionStorage.entryRestaurantPath) {
-        return true
-      }
-      return false
+    userIsOnRestaurantPage() {
+      return this.$router.currentRoute.name === 'restaurant'
     },
     name() {
       return window.sessionStorage.entryRestaurantName

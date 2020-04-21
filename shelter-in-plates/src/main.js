@@ -8,6 +8,7 @@ import VueCurrencyFilter from 'vue-currency-filter'
 
 import TopNav from '@/components/TopNav.vue'
 import Footer from '@/components/Footer.vue'
+import BackToRestaurantBanner from '@/components/BackToRestaurantBanner.vue'
 import BuyModal from '@/components/BuyModal.vue'
 
 Vue.config.productionTip = false
@@ -15,6 +16,7 @@ Vue.config.productionTip = false
 Vue.component('top-nav', TopNav)
 Vue.component('app-footer', Footer)
 Vue.component('buy-modal', BuyModal)
+Vue.component('back-to-restaurant-banner', BackToRestaurantBanner)
 
 Vue.use(VueCurrencyFilter,
   {

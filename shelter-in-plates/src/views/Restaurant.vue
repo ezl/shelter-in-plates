@@ -57,24 +57,25 @@
                                 </div>
                             </div>
                             <div class="row restaurant-page-message">
-
-                                <p>
-When making your purchase, please include a message for the hospital staff, your name, and what part of town you are from. We hope to provide these people with the sense that the whole city is behind them.
-                                </p>
-                                <p>
-                                  With every purchase of a meal, we will follow up and let you know what hospital your meal was delivered to and keep you up to date with our journey.
-                                </p>
-                                <p>
-                                  For all weekly meal purchase subscriptions:
-                                  <ul>
-                                    <li>you can cancel at any time</li>
-                                    <li>we will notify you 2 days in advance of your next charge in case you are unable to continue</li>
-                                    <li>we will also keep you up to date with when and where your meals are delivered</li>
-                                  </ul>
-                                </p>
-                              <div id="owner-signature">
-                                <img v-if="restaurant.signImageUrl" :src="restaurant.signImageUrl" alt="" class="restaurant-signature mb-5">
-                                <h6>{{ restaurant.owner }}</h6>
+                                <div>
+                                    <p>
+                                        When making your purchase, please include a message for the hospital staff, your name, and what part of town you are from. We hope to provide these people with the sense that the whole city is behind them.
+                                    </p>
+                                    <p>
+                                        With every purchase of a meal, we will follow up and let you know what hospital your meal was delivered to and keep you up to date with our journey.
+                                    </p>
+                                    <p>
+                                        For all weekly meal purchase subscriptions:
+                                    </p>
+                                    <ul>
+                                        <li>you can cancel at any time</li>
+                                        <li>we will notify you 2 days in advance of your next charge in case you are unable to continue</li>
+                                        <li>we will also keep you up to date with when and where your meals are delivered</li>
+                                    </ul>
+                                </div>
+                                <div id="owner-signature">
+                                    <img v-if="restaurant.signImageUrl" :src="restaurant.signImageUrl" alt="" class="restaurant-signature mb-5">
+                                    <h6>{{ restaurant.owner }}</h6>
                               </div>
                             </div>
                         </div>

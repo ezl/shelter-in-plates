@@ -31,7 +31,7 @@
                                 <a href="#purchase" class="nav-link"><i class="ti ti-car mr-2 text-primary"></i> Delivery Driver</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#share" class="nav-link"><i class="ti ti-magnet mr-2 text-primary"></i> Have Other Skills?/</a>
+                                <a href="#share" class="nav-link"><i class="ti ti-magnet mr-2 text-primary"></i> Have Other Skills?</a>
                             </li>
                         </ul>
                     </nav>

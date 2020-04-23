@@ -8,6 +8,7 @@ import AllRestaurantsList from '../views/AllRestaurantsList.vue'
 import Restaurant from '../views/Restaurant.vue'
 import Confirmation from '../views/Confirmation.vue'
 import NotFound from '../views/NotFound.vue'
+import Volunteer from '@/views/Volunteer.vue'
 
 Vue.use(VueRouter)
 
@@ -53,11 +54,15 @@ const routes = [
     component: Confirmation
   },
   {
+    path: '/volunteer',
+    name: 'volunteer',
+    component: Volunteer
+  },
+  {
     path: '*',
     name: 'not-found',
     component: NotFound
   }
-
 ]
 
 const router = new VueRouter({

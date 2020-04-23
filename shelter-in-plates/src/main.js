@@ -28,9 +28,10 @@ Vue.use(VueCurrencyFilter,
     symbolSpacing: true
   })
 
-
 new Vue({
   router,
   store,
   render: h => h(App)
 }).$mount('#app')
+
+

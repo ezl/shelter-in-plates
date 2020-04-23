@@ -1,4 +1,32 @@
 const restaurants = {
+    'donate': {
+        headerImageUrl:"/img/photos/bg-croissant.jpg",
+        title: "❤️ Buy A Meal For A Healthcare Hero",
+        restaurantFontClass: 'sipFont',
+        name: "Shelter-In-Plates",
+        slug: "donate",
+        link: "https://www.shelter-in-plates.com/",
+        logoUrl: "/img/restaurants/donate/logo-spot-min.png",
+        openGraphImageUrl: "/img/default-preview.png",
+        menuItems: [{
+            imageUrl: "/img/restaurants/donate/food-2.png",
+            name: "Buy a meal for a healthcare worker: Once",
+            type: "once",
+            description: "We'll deliver a healthy, nourishing meal to hospital healthcare worker on your behalf.",
+            price: 10.00,
+            stripeProductId: "sku_H9GWsH07hrUtfn"
+        },{
+            imageUrl: "/img/restaurants/donate/food-1.png",
+            name: "Buy a meal for a healthcare worker: Weekly",
+            type: "weekly",
+            description: "We'll deliver a healthy, nourishing meal to hospital healthcare worker on your behalf.",
+            price: 10.00,
+            stripeProductId: "plan_H9GYYJijpyOwYX"
+        }],
+        bottomMessage: "",
+        owner: "The Shelter-In-Plates Team ❤️",
+        signImageUrl: null
+    },
     'rooh': {
         headerImageUrl:"/img/restaurants/rooh/rooh-background.png",
         title: "ROOH",

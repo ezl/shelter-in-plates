@@ -15,15 +15,37 @@
                         <h2>Chicago</h2>
                         <router-link :to="{ name: 'restaurant', params: { slug: 'irazu' }}" tag="a"><h5>Irazú</h5></router-link>
                         <p class="restaurant-description">Costa Rican comfort food - This 30-year old neighborhood favorite is in Bucktown, where the Cerdas-Salazar family has been serving the community since 1990.</p>
-                        <p><a class="restaurant-link" href="http://irazuchicago.com/" target="_blank">(View website)</a></p>
+                        <div class="float-right">
+                            <span class="icon icon-sm"><i class="fa fa-facebook"></i></span>
+                            <span class="icon icon-sm"><i class="fa fa-instagram"></i></span>
+                            <span><a class="restaurant-link" href="http://irazuchicago.com/" target="_blank">View restaurant website</a></span>
+                        </div>
+                        <p>
+                            <a href="/r/irazu/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>BUY</span></a>
+                        </p>
 
                         <router-link :to="{ name: 'restaurant', params: { slug: 'spoke-and-bird' }}" tag="a"><h5>Spoke & Bird</h5></router-link>
                         <p class="restaurant-description">This friendly, neighborhood restaurant in the South Loop has an amazing outdoor patio, perfect for weekend summer lounging, craft beers, and amazingly bakes their own bread and pastries and has upscale, but accessible food featuring high quality ingredients</p>
-                        <p><a class="restaurant-link" href="https://www.spokeandbird.com/" target="_blank">(View website)</a></p>
+
+                        <div class="float-right">
+                            <span class="icon icon-sm"><i class="fa fa-facebook"></i></span>
+                            <span class="icon icon-sm"><i class="fa fa-instagram"></i></span>
+                            <span><a class="restaurant-link" href="https://www.spokeandbird.com/" target="_blank">View restaurant website</a></span>
+                        </div>
+                        <p>
+                            <a href="/r/spoke-and-bird/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>BUY</span></a>
+                        </p>
 
                         <router-link :to="{ name: 'restaurant', params: { slug: 'rooh' }}" tag="a"><h5>Rooh</h5></router-link>
                         <p class="restaurant-description">ROOH is modern Indian cuisine, featured in the Michelin Guide 2020, and situated in the hot restaurant row of Chicago's West Loop.</p>
-                        <p><a class="restaurant-link" href="https://www.roohchicago.com/" target="_blank">(View website)</a></p>
+                        <div class="float-right">
+                            <span class="icon icon-sm"><i class="fa fa-facebook"></i></span>
+                            <span class="icon icon-sm"><i class="fa fa-instagram"></i></span>
+                            <span><a class="restaurant-link" href="https://www.roohchicago.com/" target="_blank">View restaurant website</a></span>
+                        </div>
+                        <p>
+                            <a href="/r/rooh/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>BUY</span></a>
+                        </p>
 
                         <h2>New York City</h2>
                         <h5>Blank Slate</h5>

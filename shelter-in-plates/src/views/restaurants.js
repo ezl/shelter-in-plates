@@ -22,7 +22,7 @@ const restaurants = {
             type: "weekly",
             description: "We'll deliver a healthy, nourishing meal to hospital healthcare worker in New York on your behalf.",
             price: 10.00,
-            stripeProductId: "prod_H9Q7Sz2qbf7tPR"
+            stripeProductId: "plan_H9Q8NSpgtXOt11"
         }],
         bottomMessage: "",
         owner: "Ashley Jaffe & Zach Israel",

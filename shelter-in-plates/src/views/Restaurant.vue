@@ -30,7 +30,7 @@
                                     </template>
                                     <template v-else>
                                         <p>
-                                        The people working in Emergency Rooms and ICUs in Chicago - and all over the world - are our heroes!
+                                        The people working in Emergency Rooms and ICUs in {{ restaurant.cityName }} - and all over the world - are our heroes!
                                         </p>
                                         <p>
                                         Imagine that instead of “distancing” right now, you were leaving home each day to interact with hundreds of people who all have in common the fact that they are sick. The doctors, nurses, techs and administrators do their work with care, with professionalism, and with selflessness. But they’re not immune to anxiety and they certainly feel overwhelmed during intense times like these.
@@ -39,7 +39,7 @@
                                         Through your generosity, we would like to nourish and support these teams, to show them how appreciated they are! ❤️
                                         </p>
                                         <p>
-                                        Every meal you purchase for a healthcare worker will be prepared at <a :href="restaurant.link"><strong style="text-decoration: underline;">{{ restaurant.name }}</strong></a> and delivered to an Emergency Department in Chicago.
+                                        Every meal you purchase for a healthcare worker will be prepared at <a :href="restaurant.link"><strong style="text-decoration: underline;">{{ restaurant.name }}</strong></a> and delivered to an Emergency Department in {{ restaurant.cityName }}.
                                         </p>
                                     </template>
                                 </div>

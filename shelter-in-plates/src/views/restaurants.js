@@ -1,5 +1,6 @@
 const restaurants = {
     'blankslatenyc': {
+        cityName: "New York",
         headerImageUrl:"/img/restaurants/blankslatenyc/BlankSlate_Background.png",
         title: "Blank Slate",
         restaurantFontClass: 'blankslatenycFont',
@@ -30,6 +31,7 @@ const restaurants = {
         bottomCopyOverride: null
     },
     'donate': {
+        cityName: "town",
         headerImageUrl:"/img/photos/bg-croissant.jpg",
         title: "❤️ Buy A Meal For A Healthcare Hero",
         restaurantFontClass: 'sipFont',
@@ -58,6 +60,7 @@ const restaurants = {
         signImageUrl: null
     },
     'rooh': {
+        cityName: "Chicago",
         headerImageUrl:"/img/restaurants/rooh/rooh-background.png",
         title: "ROOH",
         restaurantFontClass: 'roohFont',
@@ -86,6 +89,7 @@ const restaurants = {
         signImageUrl: "/img/restaurants/spoke-and-bird/spoke-and-bird-signature.svg"
     },
     irazu: {
+        cityName: "Chicago",
         headerImageUrl:"/img/restaurants/irazu/irazu-background.png",
         title: "Irazú: Costa Rican Restaurant",
         name: "Irazú",
@@ -113,6 +117,7 @@ const restaurants = {
         signImageUrl: "/img/restaurants/irazu/henry-signature.png"
     },
     'spoke-and-bird': {
+        cityName: "Chicago",
         headerImageUrl:"/img/restaurants/spoke-and-bird/spoke-and-bird-background.png",
         title: "Spoke & Bird",
         restaurantFontClass: 'spokeAndBirdFont',

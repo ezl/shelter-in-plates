@@ -39,7 +39,7 @@
             </div>
 
             <div class="module module-logo">
-                <img src="/img/logo-superimposed-dark-fulltext.svg" alt="">
+                <img src="/img/logo-horizontal-dark-fulltext.svg" alt="">
             </div>
             <div class="module-cart">
                 <router-link v-if="displayBuyButton" :to="{ name: 'restaurant', params: {slug: 'donate'} }" tag="a" style='line-height: 26px; top: 3px;' class="btn btn-outline-secondary">
@@ -114,6 +114,10 @@ export default {
 <style lang="scss">
 .btn-outline-secondary {
     margin-left: 5px;
+}
+#header-mobile .module-logo {
+    /* override default of centering mobile logo b/c donate and volunteer buttons overlap */
+    text-align: left;
 }
 
 </style>

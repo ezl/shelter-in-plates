@@ -8,7 +8,7 @@ const restaurants = {
         slug: "blankslatenyc",
         link: "https://www.blankslatenyc.com/",
         logoUrl: "/img/restaurants/blankslatenyc/BlankSlate_Logo.png",
-        openGraphImageUrl: "/img/restaurants/blankslatenyc/BlankSlate_Preview.png",
+        openGraphImageUrl: "/img/restaurants/blankslatenyc/blank-slate-preview-b.png",
         menuItems: [{
             imageUrl: "/img/restaurants/blankslatenyc/BlankSlate_FoodPicture_1.png",
             name: "Buy a meal for a healthcare worker: Once",
@@ -26,7 +26,7 @@ const restaurants = {
         }],
         bottomMessage: "",
         owner: "Ashley Jaffe & Zach Israel",
-        signImageUrl: "/img/restaurants/blankslatenyc/BlankSlate_Signature.png",
+        signImageUrl: "/img/restaurants/blankslatenyc/BlankSlate_Signature_Teal.png",
         topCopyOverride: null,
         bottomCopyOverride: null
     },

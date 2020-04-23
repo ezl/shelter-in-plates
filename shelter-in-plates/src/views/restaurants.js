@@ -24,7 +24,7 @@ const restaurants = {
             stripeProductId: "prod_H9Q7Sz2qbf7tPR"
         }],
         bottomMessage: "",
-        owner: "Ashley Jaffey",
+        owner: "Ashley Jaffe & Zach Israel",
         signImageUrl: "/img/restaurants/blankslatenyc/BlankSlate_Signature_2.png"
     },
     'donate': {

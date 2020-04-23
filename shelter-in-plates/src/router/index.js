@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import LearnMore from '../views/LearnMore.vue'
 import HelpOut from '../views/HelpOut.vue'
 import CancelSubscription from '../views/CancelSubscription.vue'
+import AllRestaurantsList from '../views/AllRestaurantsList.vue'
 import Restaurant from '../views/Restaurant.vue'
 import Confirmation from '../views/Confirmation.vue'
 import NotFound from '../views/NotFound.vue'
@@ -30,6 +31,11 @@ const routes = [
     path: '/sample',
     name: 'sample',
     component: Restaurant
+  },
+  {
+    path: '/restaurants',
+    name: 'restaurants',
+    component: AllRestaurantsList
   },
   {
     path: '/cancel',

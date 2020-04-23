@@ -20,8 +20,9 @@
                     </div>
                     <div class="col-md-3">
                         <div class="module right" >
-                            <a v-if="displayJoinButton" href="https://shelter-in-plates.typeform.com/to/EENdAG" target="_blank" class="btn btn-outline-secondary"><span>Join</span></a>
-                            <a href="#" v-if="displayBuyButton" @click="openBuyModal()" class="btn btn-outline-secondary"><span>Buy</span></a>
+                            <router-link v-if="displayBuyButton" :to="{ name: 'restaurant', params: {slug: 'donate'} }" tag="a" class="btn btn-outline-secondary">
+                              <span>Donate</span>
+                            </router-link>
                             <router-link v-if="displayVolunteerButton" :to="{ name: 'volunteer' }" tag="a" class="btn btn-outline-secondary">
                               <span>Volunteer</span>
                             </router-link>
@@ -69,13 +70,10 @@ export default {
             return this.$route.name
         },
         displayBuyButton() {
-            return this.currentRouteName === 'restaurant' && this.$route.params.slug === 'donate'
+            return !(this.currentRouteName === 'restaurant')
         },
         displayVolunteerButton() {
-            return this.currentRouteName === 'restaurant' && this.$route.params.slug === 'donate'
-        },
-        displayJoinButton() {
-            return !['confirmation', 'restaurant'].includes(this.currentRouteName)
+            return true
         },
         navLinks() {
             if(this.currentRouteName === 'restaurant') {

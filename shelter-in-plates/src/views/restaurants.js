@@ -25,7 +25,9 @@ const restaurants = {
         }],
         bottomMessage: "",
         owner: "Ashley Jaffe & Zach Israel",
-        signImageUrl: "/img/restaurants/blankslatenyc/BlankSlate_Signature_2.png"
+        signImageUrl: "/img/restaurants/blankslatenyc/BlankSlate_Signature_2.png",
+        topCopyOverride: null,
+        bottomCopyOverride: null
     },
     'donate': {
         headerImageUrl:"/img/photos/bg-croissant.jpg",

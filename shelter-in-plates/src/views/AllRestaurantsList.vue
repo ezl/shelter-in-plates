@@ -21,7 +21,7 @@
                             <span><a class="restaurant-link" href="http://irazuchicago.com/" target="_blank">View restaurant website</a></span>
                         </div>
                         <p>
-                            <a href="/r/irazu/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>BUY</span></a>
+                            <a href="/r/irazu/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>Donate A Meal</span></a>
                         </p>
 
                         <router-link :to="{ name: 'restaurant', params: { slug: 'spoke-and-bird' }}" tag="a"><h5>Spoke & Bird</h5></router-link>
@@ -33,7 +33,7 @@
                             <span><a class="restaurant-link" href="https://www.spokeandbird.com/" target="_blank">View restaurant website</a></span>
                         </div>
                         <p>
-                            <a href="/r/spoke-and-bird/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>BUY</span></a>
+                            <a href="/r/spoke-and-bird/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>Donate A Meal</span></a>
                         </p>
 
                         <router-link :to="{ name: 'restaurant', params: { slug: 'rooh' }}" tag="a"><h5>Rooh</h5></router-link>
@@ -44,7 +44,7 @@
                             <span><a class="restaurant-link" href="https://www.roohchicago.com/" target="_blank">View restaurant website</a></span>
                         </div>
                         <p>
-                            <a href="/r/rooh/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>BUY</span></a>
+                            <a href="/r/rooh/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>Donate A Meal</span></a>
                         </p>
 
                         <h2>New York City</h2>
@@ -57,7 +57,7 @@
                             <span><a class="restaurant-link" href="https://www.blankslatenyc.com/" target="_blank">View restaurant website</a></span>
                         </div>
                         <p>
-                            <a href="/r/rooh/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>BUY</span></a>
+                            <a href="/r/rooh/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>Donate A Meal</span></a>
                         </p>
 
 

@@ -16,8 +16,8 @@
                         <router-link :to="{ name: 'restaurant', params: { slug: 'irazu' }}" tag="a"><h5>Irazú</h5></router-link>
                         <p class="restaurant-description">Costa Rican comfort food - This 30-year old neighborhood favorite is in Bucktown, where the Cerdas-Salazar family has been serving the community since 1990.</p>
                         <div class="float-right">
-                            <span class="icon icon-sm"><i class="fa fa-facebook"></i></span>
-                            <span class="icon icon-sm"><i class="fa fa-instagram"></i></span>
+                            <a href="https://www.instagram.com/irazuchicago/" target="_blank"><span class="icon icon-sm"><i class="fa fa-facebook"></i></span></a>
+                            <a href="https://www.facebook.com/irazuchicago/" target="_blank"><span class="icon icon-sm"><i class="fa fa-instagram"></i></span></a>
                             <span><a class="restaurant-link" href="http://irazuchicago.com/" target="_blank">View restaurant website</a></span>
                         </div>
                         <p>
@@ -28,8 +28,8 @@
                         <p class="restaurant-description">This friendly, neighborhood restaurant in the South Loop has an amazing outdoor patio, perfect for weekend summer lounging, craft beers, and amazingly bakes their own bread and pastries and has upscale, but accessible food featuring high quality ingredients</p>
 
                         <div class="float-right">
-                            <span class="icon icon-sm"><i class="fa fa-facebook"></i></span>
-                            <span class="icon icon-sm"><i class="fa fa-instagram"></i></span>
+                            <a href="https://www.instagram.com/theSpokeAndBird/" target="_blank"><span class="icon icon-sm"><i class="fa fa-facebook"></i></span></a>
+                            <a href="https://www.facebook.com/spokeandbird/" target="_blank"><span class="icon icon-sm"><i class="fa fa-instagram"></i></span></a>
                             <span><a class="restaurant-link" href="https://www.spokeandbird.com/" target="_blank">View restaurant website</a></span>
                         </div>
                         <p>
@@ -39,8 +39,8 @@
                         <router-link :to="{ name: 'restaurant', params: { slug: 'rooh' }}" tag="a"><h5>Rooh</h5></router-link>
                         <p class="restaurant-description">ROOH is modern Indian cuisine, featured in the Michelin Guide 2020, and situated in the hot restaurant row of Chicago's West Loop.</p>
                         <div class="float-right">
-                            <span class="icon icon-sm"><i class="fa fa-facebook"></i></span>
-                            <span class="icon icon-sm"><i class="fa fa-instagram"></i></span>
+                            <a href="https://www.instagram.com/roohchicago/" target="_blank"><span class="icon icon-sm"><i class="fa fa-facebook"></i></span></a>
+                            <a href="https://www.facebook.com/roohchicago/" target="_blank"><span class="icon icon-sm"><i class="fa fa-instagram"></i></span></a>
                             <span><a class="restaurant-link" href="https://www.roohchicago.com/" target="_blank">View restaurant website</a></span>
                         </div>
                         <p>
@@ -48,8 +48,20 @@
                         </p>
 
                         <h2>New York City</h2>
-                        <h5>Blank Slate</h5>
-                        <p>Coming soon...</p>
+                        <router-link :to="{ name: 'restaurant', params: { slug: 'blankslatenyc' }}" tag="a"><h5>Blank Slate Coffee + Kitchen</h5></router-link>
+                        <p class="restaurant-description">Blank Slate Coffee + Kitchen is a bustling cafe and coffee bar with locations in NoMad and Midtown in NYC.</p>
+                        <p class="restaurant-description">The brainchild of husband and wife team Zach Israel and Ashley Jaffe, Blank Slate celebrates culinary excellence, gracious service and inspired creativity. They take pride in offering quality dining with neighborhood charm.</p>
+                        <div class="float-right">
+                            <a href="https://www.instagram.com/blankslatenyc/" target="_blank"><span class="icon icon-sm"><i class="fa fa-facebook"></i></span></a>
+                            <a href="https://www.facebook.com/blankslatenyc/" target="_blank"><span class="icon icon-sm"><i class="fa fa-instagram"></i></span></a>
+                            <span><a class="restaurant-link" href="https://www.blankslatenyc.com/" target="_blank">View restaurant website</a></span>
+                        </div>
+                        <p>
+                            <a href="/r/rooh/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>BUY</span></a>
+                        </p>
+
+
+
 
                         <h2>Denver / Boulder</h2>
                         <h5>Oak</h5>

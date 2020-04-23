@@ -57,7 +57,7 @@
                             <span><a class="restaurant-link" href="https://www.blankslatenyc.com/" target="_blank">View restaurant website</a></span>
                         </div>
                         <p>
-                            <a href="/r/rooh/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>Donate A Meal</span></a>
+                            <a href="/r/blankslatenyc/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>Donate A Meal</span></a>
                         </p>
 
 

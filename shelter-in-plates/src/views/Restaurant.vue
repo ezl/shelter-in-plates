@@ -69,7 +69,7 @@
                                     </p>
                                     <ul>
                                         <li>you can cancel at any time</li>
-                                        <li>we will notify you 2 days in advance of your next charge in case you are unable to continue</li>
+                                        <li>we will notify you in advance of your next charge in case you are unable to continue</li>
                                         <li>we will also keep you up to date with when and where your meals are delivered</li>
                                     </ul>
                                 </div>
@@ -182,6 +182,11 @@ img.restaurant-signature {
 
 .spokeAndBirdFont {
     font-family: 'Albatross+-+CasterOne';
+}
+.sipFont {
+    font-weight: 900;
+    font-size: 2rem;
+    color: #F0CF87;
 }
 .roohFont {
     font-weight: 900;

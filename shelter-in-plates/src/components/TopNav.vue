@@ -9,7 +9,7 @@
                             <img src="/img/logo-light-fulltext.svg" alt="" width="88" >
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                         <nav class="module module-navigation left mr-4">
                             <ul id="nav-main" class="nav nav-main">
                                 <li v-for="link in navLinks" :key="link.text" :class="{ selected: currentRouteName === link.value }">
@@ -18,9 +18,13 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-md-2">
-                        <div class="module right" v-if="displayJoinButton">
-                            <a href="https://shelter-in-plates.typeform.com/to/EENdAG" target="_blank" class="btn btn-outline-secondary"><span>Join</span></a>
+                    <div class="col-md-3">
+                        <div class="module right" >
+                            <a v-if="displayJoinButton" href="https://shelter-in-plates.typeform.com/to/EENdAG" target="_blank" class="btn btn-outline-secondary"><span>Join</span></a>
+                            <a href="#" v-if="displayBuyButton" @click="openBuyModal()" class="btn btn-outline-secondary"><span>Buy</span></a>
+                            <router-link v-if="displayVolunteerButton" :to="{ name: 'volunteer' }" tag="a" class="btn btn-outline-secondary">
+                              <span>Volunteer</span>
+                            </router-link>
                         </div>
                     </div>
                 </div>
@@ -37,6 +41,12 @@
                 <img src="/img/logo-superimposed-dark-fulltext.svg" alt="">
             </div>
             <a v-if="displayJoinButton" href="https://shelter-in-plates.typeform.com/to/EENdAG" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-secondary"><span>Join</span></a>
+            <!--
+            <a v-if="displayBuyButton" href="#" @click="openBuyModal()" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-secondary"><span>Buy</span></a>
+            <router-link v-if="displayVolunteerButton" :to="{ name: 'volunteer' }" tag="a" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-secondary">
+                <span>Volunteer</span>
+            </router-link>
+            -->
         </header>
 
             <!-- Panel Mobile -->
@@ -57,6 +67,12 @@ export default {
     computed: {
         currentRouteName() {
             return this.$route.name
+        },
+        displayBuyButton() {
+            return this.currentRouteName === 'restaurant' && this.$route.params.slug === 'donate'
+        },
+        displayVolunteerButton() {
+            return this.currentRouteName === 'restaurant' && this.$route.params.slug === 'donate'
         },
         displayJoinButton() {
             return !['confirmation', 'restaurant'].includes(this.currentRouteName)
@@ -85,9 +101,17 @@ export default {
                 value: "sample"
             }]
         }
+    },
+    methods: {
+        openBuyModal() {
+            this.$root.$emit('open-buy-modal', 'weekly');
+        }
     }
 }
 </script>
 <style lang="scss">
+.btn-outline-secondary {
+    margin-left: 5px;
+}
 
 </style>

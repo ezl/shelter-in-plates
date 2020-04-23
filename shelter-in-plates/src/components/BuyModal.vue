@@ -99,9 +99,18 @@ export default {
             required: true
         }
     },
+    created() {
+        this.$root.$on('open-buy-modal', this.toggleModal);
+    },
+    beforeDestroy() {
+        this.$root.$off('open-buy-modal', this.toggleModal);
+    },
     methods: {
-        toggleModal () {
-            this.modalToggled = !this.modalToggled
+        toggleModal (type) {
+            // Type is passed by TopNav $emit, currently set as "weekly"
+            if ((type && this.item.type === type) || !type ) {
+                this.modalToggled = !this.modalToggled
+            } 
         },
         savePersonalMessage() {
             const d = new Date()

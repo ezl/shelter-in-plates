@@ -74,7 +74,7 @@
                         <div id="faq3_1" class="pb-5">
                             <h4>Purchase Meals For Healthcare Workers</h4>
                             <p class="lead">
-                                You can select to purchase meals from <a href="#">any participating restaurant here</a>! Just select how many you would like to purchase, add a personal note to the restaurant and health care workers, and we will take care of the rest.
+                                You can select to purchase meals from <router-link :to="{ name: 'restaurants' }" tag="a">any participating restaurant here</router-link>! Just select how many you would like to purchase, add a personal note to the restaurant and health care workers, and we will take care of the rest.
                             </p>
                             <p class="lead">
                                 We will let you know when your order is received and when it is delivered to a local hospital in the next few days.

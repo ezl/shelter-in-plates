@@ -29,11 +29,6 @@ const routes = [
     component: HelpOut
   },
   {
-    path: '/sample',
-    name: 'sample',
-    component: Restaurant
-  },
-  {
     path: '/restaurants',
     name: 'restaurants',
     component: AllRestaurantsList

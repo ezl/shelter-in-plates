@@ -94,9 +94,6 @@ export default {
             },{
                 text: "Diners: Help Out",
                 value: "help_out"
-            }, {
-                text: "Sample",
-                value: "sample"
             }]
         }
     },

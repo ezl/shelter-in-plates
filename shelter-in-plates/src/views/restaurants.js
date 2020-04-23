@@ -1,4 +1,32 @@
 const restaurants = {
+    'blankslatenyc': {
+        headerImageUrl:"/img/restaurants/blankslatenyc/BlankSlate_Background.png",
+        title: "Blank Slate",
+        restaurantFontClass: '',
+        name: "Blank Slate",
+        slug: "blankslatenyc",
+        link: "https://www.blankslatenyc.com/",
+        logoUrl: "/img/restaurants/blankslatenyc/BlankSlate_Logo.png",
+        openGraphImageUrl: "/img/restaurants/blankslatenyc/BlankSlate_Preview.png",
+        menuItems: [{
+            imageUrl: "/img/restaurants/blankslatenyc/BlankSlate_FoodPicture_1.png",
+            name: "Buy a meal for a healthcare worker: Once",
+            type: "once",
+            description: "We'll deliver a healthy, nourishing meal to hospital healthcare worker in New York on your behalf.",
+            price: 10.00,
+            stripeProductId: "sku_H9Q6ZxerZbHoGv"
+        },{
+            imageUrl: "/img/restaurants/blankslatenyc/BlankSlate_FoodPicture_2.png",
+            name: "Buy a meal for a healthcare worker: Weekly",
+            type: "weekly",
+            description: "We'll deliver a healthy, nourishing meal to hospital healthcare worker in New York on your behalf.",
+            price: 10.00,
+            stripeProductId: "prod_H9Q7Sz2qbf7tPR"
+        }],
+        bottomMessage: "",
+        owner: "Ashley Jaffey",
+        signImageUrl: "/img/restaurants/blankslatenyc/BlankSlate_Signature_2.png"
+    },
     'donate': {
         headerImageUrl:"/img/photos/bg-croissant.jpg",
         title: "❤️ Buy A Meal For A Healthcare Hero",

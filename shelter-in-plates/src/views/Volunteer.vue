@@ -52,7 +52,7 @@
                             <p>
                                 If you're interested in being a part of something that helps and connects communities, even if you're not sure how you can help or haven't participated in something like this before -- <strong>PLEASE reach out to us</strong>:
                             </p>
-                            <a class="btn btn-outline-primary" href="mailto:admin@shelter-in-plates.com">Email Us At admin@shelter-in-plates.com</a>
+                            <a class="btn btn-outline-primary" href="mailto:volunteer@shelter-in-plates.com">Email Us At volunteer@shelter-in-plates.com</a>
                         </div>
                     </div>
                     <div id="invite">
@@ -76,7 +76,7 @@
                             <p>
                                 We'll provide a step by step checklist and playbook for how you can do this, and we'll work with you closely to execute a campaign.
                             </p>
-                            <a class="btn btn-outline-primary" href="mailto:admin@shelter-in-plates.com">Email Us At admin@shelter-in-plates.com</a>
+                            <a class="btn btn-outline-primary" href="mailto:volunteer@shelter-in-plates.com">Email Us At volunteer@shelter-in-plates.com</a>
                         </div>
                     </div>
                     <div id="purchase">
@@ -104,7 +104,7 @@
                             <p>
                                 We can provide Personal Protective Equipment if you do not have your own.
                             </p>
-                            <a class="btn btn-outline-primary" href="mailto:admin@shelter-in-plates.com">Email Us At admin@shelter-in-plates.com</a>
+                            <a class="btn btn-outline-primary" href="mailto:volunteer@shelter-in-plates.com">Email Us At volunteer@shelter-in-plates.com</a>
                         </div>
                     </div>
                     <div id="share">
@@ -125,7 +125,7 @@
                                 <li>Email marketing</li>
                             </ul>
                             <p>Or anything else you think might be useful, please reach out to start a conversation.</p>
-                            <a class="btn btn-outline-primary" href="mailto:admin@shelter-in-plates.com">Email Us At admin@shelter-in-plates.com</a>
+                            <a class="btn btn-outline-primary" href="mailto:volunteer@shelter-in-plates.com">Email Us At volunteer@shelter-in-plates.com</a>
                         </div>
                     </div>
                 </div>

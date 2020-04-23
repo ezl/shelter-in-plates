@@ -206,4 +206,10 @@ img.restaurant-signature {
     font-weight: 900;
     color: #F0CF87;
 }
+.blankslatenycFont {
+    font-weight: 300;
+    font-face: Brown_Regular;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
 </style>

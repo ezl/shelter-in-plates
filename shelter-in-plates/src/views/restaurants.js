@@ -2,7 +2,7 @@ const restaurants = {
     'blankslatenyc': {
         headerImageUrl:"/img/restaurants/blankslatenyc/BlankSlate_Background.png",
         title: "Blank Slate",
-        restaurantFontClass: '',
+        restaurantFontClass: 'blankslatenycFont',
         name: "Blank Slate",
         slug: "blankslatenyc",
         link: "https://www.blankslatenyc.com/",

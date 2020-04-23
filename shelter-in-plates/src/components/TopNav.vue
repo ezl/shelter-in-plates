@@ -41,7 +41,14 @@
             <div class="module module-logo">
                 <img src="/img/logo-superimposed-dark-fulltext.svg" alt="">
             </div>
-            <a v-if="displayJoinButton" href="https://shelter-in-plates.typeform.com/to/EENdAG" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-secondary"><span>Join</span></a>
+            <div class="module-cart">
+                <router-link v-if="displayBuyButton" :to="{ name: 'restaurant', params: {slug: 'donate'} }" tag="a" style='line-height: 26px; top: 3px;' class="btn btn-outline-secondary">
+                  <span>Donate</span>
+                </router-link>
+                <router-link v-if="displayVolunteerButton" :to="{ name: 'volunteer' }" tag="a" style='line-height: 26px; top: 3px;' class="btn btn-outline-secondary">
+                  <span>Volunteer</span>
+                </router-link>
+            </div>
             <!--
             <a v-if="displayBuyButton" href="#" @click="openBuyModal()" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-secondary"><span>Buy</span></a>
             <router-link v-if="displayVolunteerButton" :to="{ name: 'volunteer' }" tag="a" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-secondary">

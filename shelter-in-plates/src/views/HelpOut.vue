@@ -74,10 +74,7 @@
                         <div id="faq3_1" class="pb-5">
                             <h4>Purchase Meals For Healthcare Workers</h4>
                             <p class="lead">
-                                Email us at <a href="mailto:admin@shelter-in-plates.com">admin@shelter-in-plates.com</a> to see what restaurant we're currently working with and we'll send you a link to support them.
-                                <!--
                                 You can select to purchase meals from <a href="#">any participating restaurant here</a>! Just select how many you would like to purchase, add a personal note to the restaurant and health care workers, and we will take care of the rest.
-                                -->
                             </p>
                             <p class="lead">
                                 We will let you know when your order is received and when it is delivered to a local hospital in the next few days.

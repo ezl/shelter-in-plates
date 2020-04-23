@@ -2,7 +2,7 @@
     <div id="content">
       <section id="hero" class="section section-lg page-title bg-light" style='background-image: url("img/photos/bg-desk.jpg"); background-size: cover;'>
           <div class="container" data-local-scroll>
-              <div class="col-lg-8 push-lg-4">
+              <div class="col-lg-8 push-lg-3">
                   <h1>Shelter-In-Plates</h1>
                   <p class="lead">Help keep local restaurants alive while supporting hard-working health care professionals</p>
                   <a href="#main" class="btn btn-outline-primary btn-lg"><span>Learn How<i class="i-after ti ti-arrow-down"></i></span></a>

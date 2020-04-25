@@ -28,7 +28,16 @@ const restaurants = {
         bottomMessage: "",
         owner: "Ashley Jaffe & Zach Israel",
         signImageUrl: "/img/restaurants/blankslatenyc/BlankSlate_Signature_Teal.png",
-        topCopyOverride: null,
+        topCopyOverride: "" +
+        "<p>" +
+            "The people working in hospitals in New York - and all over the world - are our heroes!" +
+        "</p>" +
+        "<p>" +
+            "Imagine that instead of “distancing” right now you were leaving home each day to interact with hundreds of people who all have in common the fact that they are sick.</p>" +
+         "</p>" +
+        "<p>" +
+            "The doctors, nurses, techs and administrators do their work with care, with professionalism, and with selflessness. But they’re not immune to anxiety and they certainly feel overwhelmed during intense times like these." +
+         "</p>",
         bottomCopyOverride: null
     },
     'donate': {

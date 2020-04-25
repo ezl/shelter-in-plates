@@ -27,7 +27,7 @@
                                 </div>
                                 <div :class="{'col-md-12': !restaurant.logoUrl, 'col-md-9': restaurant.logoUrl }">
                                     <template v-if="restaurant.topCopyOverride">
-                                        {{ restaurant.topCopyOverride}}
+                                        <div v-html="restaurant.topCopyOverride"></div>
                                     </template>
                                     <template v-else>
                                         <p>

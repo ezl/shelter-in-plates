@@ -65,7 +65,7 @@
                             <div class="row restaurant-page-message">
                                 <div class="full-width">
                                     <template v-if="restaurant.bottomCopyOverride">
-                                        {{ restaurant.bottomCopyOverride }}
+                                        <div v-html="restaurant.bottomCopyOverride"></div>
                                     </template>
                                     <template v-else>
                                             <p>

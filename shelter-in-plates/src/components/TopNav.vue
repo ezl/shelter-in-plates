@@ -35,17 +35,18 @@
         <!-- Mobile Header -->
         <header id="header-mobile" class="light">
             <div class="module module-nav-toggle">
-                <a href="#" id="nav-toggle" data-toggle="panel-mobile"><span></span><span></span><span></span><span></span></a>
+                <a href="#" id="nav-toggle" data-toggle="panel-mobile">
+                    <img src="/img/logo-horizontal-dark-fulltext-shorter.svg" alt="">
+                </a>
             </div>
 
             <div class="module module-logo">
-                <img src="/img/logo-horizontal-dark-fulltext.svg" alt="">
             </div>
             <div class="module-cart">
-                <router-link v-if="displayBuyButton" :to="{ name: 'restaurant', params: {slug: 'donate'} }" tag="a" style='line-height: 26px; top: 3px;' class="btn btn-outline-secondary">
+                <router-link v-if="displayBuyButton" :to="{ name: 'restaurant', params: {slug: 'donate'} }" tag="a" class="btn btn-outline-secondary mobile-shrink-button">
                   <span>Donate</span>
                 </router-link>
-                <router-link v-if="displayVolunteerButton" :to="{ name: 'volunteer' }" tag="a" style='line-height: 26px; top: 3px;' class="btn btn-outline-secondary">
+                <router-link v-if="displayVolunteerButton" :to="{ name: 'volunteer' }" tag="a" class="btn btn-outline-secondary mobile-shrink-button">
                   <span>Volunteer</span>
                 </router-link>
             </div>
@@ -120,4 +121,27 @@ export default {
     text-align: left;
 }
 
+.mobile-shrink-button {
+    line-height: 26px;
+    top: 3px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+#header-mobile .module-nav-toggle {
+    width: unset;
+}
+
+#header-mobile .module {
+    line-height: unset;
+}
+
+#nav-toggle {
+    width: unset;
+    padding-left: 15px;
+
+    img {
+      height: 30px;
+    }
+}
 </style>

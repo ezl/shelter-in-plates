@@ -35,11 +35,12 @@
         <!-- Mobile Header -->
         <header id="header-mobile" class="light">
             <div class="module module-nav-toggle">
-                <a href="#" id="nav-toggle" data-toggle="panel-mobile"><span></span><span></span><span></span><span></span></a>
+                <a href="#" id="nav-toggle" data-toggle="panel-mobile">
+                    <img src="/img/logo-horizontal-dark-fulltext-shorter.svg" alt="">
+                </a>
             </div>
 
             <div class="module module-logo">
-                <img src="/img/logo-horizontal-dark-fulltext-shorter.svg" alt="">
             </div>
             <div class="module-cart">
                 <router-link v-if="displayBuyButton" :to="{ name: 'restaurant', params: {slug: 'donate'} }" tag="a" class="btn btn-outline-secondary mobile-shrink-button">
@@ -127,4 +128,20 @@ export default {
     padding-right: 0.75rem;
 }
 
+#header-mobile .module-nav-toggle {
+    width: unset;
+}
+
+#header-mobile .module {
+    line-height: unset;
+}
+
+#nav-toggle {
+    width: unset;
+    padding-left: 15px;
+
+    img {
+      height: 30px;
+    }
+}
 </style>

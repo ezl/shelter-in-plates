@@ -4,6 +4,7 @@ const restaurants = {
         headerImageUrl:"/img/restaurants/blankslatenyc/BlankSlate_Background.png",
         title: "Blank Slate",
         restaurantFontClass: 'blankslatenycFont',
+        subTitleOverride: 'Join Blank Slate in Helping Hospitals & Essential Workers Fight Covid-19',
         name: "Blank Slate",
         slug: "blankslatenyc",
         link: "https://www.blankslatenyc.com/",

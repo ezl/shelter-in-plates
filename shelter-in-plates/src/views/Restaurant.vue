@@ -7,7 +7,8 @@
                 <div class="row">
                     <div class="col-lg-8 push-lg-4">
                         <h1 class="mb-2" :class="restaurant.restaurantFontClass">{{ restaurant.title }}</h1>
-                        <h4 class="mb-0">Join {{ restaurant.name }} in Helping Hospital Workers Fight Covid-19</h4>
+                        <h4 v-if="restaurant.subTitleOverride" v-html="restaurant.subTitleOverride" class="mb-0"></h4>
+                        <h4 v-else class="mb-0">Join {{ restaurant.name }} in Helping Hospital Workers Fight Covid-19</h4>
                     </div>
                 </div>
             </div>

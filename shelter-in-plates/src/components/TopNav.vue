@@ -42,10 +42,10 @@
                 <img src="/img/logo-horizontal-dark-fulltext-shorter.svg" alt="">
             </div>
             <div class="module-cart">
-                <router-link v-if="displayBuyButton" :to="{ name: 'restaurant', params: {slug: 'donate'} }" tag="a" style='line-height: 26px; top: 3px;' class="btn btn-outline-secondary">
+                <router-link v-if="displayBuyButton" :to="{ name: 'restaurant', params: {slug: 'donate'} }" tag="a" class="btn btn-outline-secondary mobile-shrink-button">
                   <span>Donate</span>
                 </router-link>
-                <router-link v-if="displayVolunteerButton" :to="{ name: 'volunteer' }" tag="a" style='line-height: 26px; top: 3px;' class="btn btn-outline-secondary">
+                <router-link v-if="displayVolunteerButton" :to="{ name: 'volunteer' }" tag="a" class="btn btn-outline-secondary mobile-shrink-button">
                   <span>Volunteer</span>
                 </router-link>
             </div>
@@ -118,6 +118,13 @@ export default {
 #header-mobile .module-logo {
     /* override default of centering mobile logo b/c donate and volunteer buttons overlap */
     text-align: left;
+}
+
+.mobile-shrink-button {
+    line-height: 26px;
+    top: 3px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
 }
 
 </style>

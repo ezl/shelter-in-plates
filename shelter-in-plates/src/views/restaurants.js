@@ -96,7 +96,7 @@ const restaurants = {
         }],
         bottomMessage: "",
         owner: "Manish & Rina Mallick",
-        signImageUrl: "/img/restaurants/spoke-and-bird/spoke-and-bird-signature.svg"
+        signImageUrl: "/img/restaurants/rooh/rooh-signature.png"
     },
     irazu: {
         cityName: "Chicago",

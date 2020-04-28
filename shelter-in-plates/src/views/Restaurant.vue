@@ -48,14 +48,14 @@
 
                             <div id="menuBurgersContent" class="row menu-category-content padded">
                                 <div class="row gutters-sm">
-                                    <div class="col-lg-4 col-6" v-for="item in restaurant.menuItems" :key="item.name">
+                                    <div class="col-lg-6 col-6" v-for="item in restaurant.menuItems" :key="item.name">
                                         <!-- Menu Item -->
                                         <div class="menu-item menu-grid-item" >
-                                            <img class="mb-4" :src="item.imageUrl" alt="">
+                                            <img class="mb-4 itemImage" :src="item.imageUrl" alt="">
                                             <h6 class="mb-2">{{ item.name }}</h6>
                                             <span class="text-muted text-sm">{{ item.description }}</span>
                                             <div class="row align-items-center mt-4">
-                                                <div class="col-sm-6"><span class="text-md mr-4">{{ item.price | currency }} <span class="text-muted">{{ item.type === 'once' ? 'one time' : 'weekly' }}</span></span></div>
+                                                <div class="col-md-6"><span class="text-md mr-4">{{ item.price | currency }} <span class="text-muted">{{ item.type === 'once' ? 'one time' : 'weekly' }}</span></span></div>
                                                 <buy-modal :item="item" :restaurant="restaurant" />
                                             </div>
                                         </div>
@@ -212,5 +212,9 @@ img.restaurant-signature {
     font-face: Brown_Regular;
     text-transform: uppercase;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.itemImage {
+  width: 100%;
 }
 </style>

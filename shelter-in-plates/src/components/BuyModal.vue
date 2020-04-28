@@ -1,5 +1,5 @@
 <template>
-    <div class="col-sm-6 text-sm-right mt-2 mt-sm-0">
+    <div class="col-md-6 text-md-right mt-2 mt-sm-2">
         <!-- Modal / Product -->
         <div v-show="modalToggled" class="modal fade show" id="productModal" role="dialog">
             <div class="modal-dialog" role="document">
@@ -70,8 +70,8 @@
         </div>
         <div class="modal-backdrop fade show" v-if="modalToggled"></div>
 
-        <div class=" buy-button">
-            <button id='buySingleMealButton' class="btn btn-outline-secondary btn-sm" @click="toggleModal()">
+        <div class="buy-button">
+            <button id='buySingleMealButton' class="pl-5 pr-5 btn btn-outline-secondary btn-md" @click="toggleModal()">
                 <span>Buy</span>
             </button>
         </div>
@@ -198,7 +198,8 @@ export default {
     
 }
 
-.buy-button {
-    float: right;
+.buy-button > button {
+  width: 100%;
 }
+
 </style>

@@ -36,17 +36,6 @@
                             <a href="/r/spoke-and-bird/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>Donate A Meal</span></a>
                         </p>
 
-                        <router-link :to="{ name: 'restaurant', params: { slug: 'rooh' }}" tag="a"><h5>Rooh</h5></router-link>
-                        <p class="restaurant-description">ROOH is modern Indian cuisine, featured in the Michelin Guide 2020, and situated in the hot restaurant row of Chicago's West Loop.</p>
-                        <div class="float-right">
-                            <a href="https://www.instagram.com/roohchicago/" target="_blank"><span class="icon icon-sm"><i class="fa fa-facebook"></i></span></a>
-                            <a href="https://www.facebook.com/roohchicago/" target="_blank"><span class="icon icon-sm"><i class="fa fa-instagram"></i></span></a>
-                            <span><a class="restaurant-link" href="https://www.roohchicago.com/" target="_blank">View restaurant website</a></span>
-                        </div>
-                        <p>
-                            <a href="/r/rooh/" style='line-height: 26px; top: 3px;' class="module-cart btn btn-outline-primary"><span>Donate A Meal</span></a>
-                        </p>
-
                         <h2>New York City</h2>
                         <router-link :to="{ name: 'restaurant', params: { slug: 'blankslatenyc' }}" tag="a"><h5>Blank Slate Coffee + Kitchen</h5></router-link>
                         <p class="restaurant-description">Blank Slate Coffee + Kitchen is a bustling cafe and coffee bar with locations in NoMad and Midtown in NYC.</p>
